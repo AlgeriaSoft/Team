@@ -61,9 +61,9 @@ header > .top-nav .email > i.material-icons {
 header > .top-nav .mat-button {
    padding: 0;
    width: 65px;
-   color: $white;
+   color: #FFFFFF;
    min-width: 65px;
-   background: $red;
+   background: #FF3450;
    font-weight: 700;
    max-height: 25px;
    line-height: 22px;
@@ -73,7 +73,7 @@ header > .top-nav .mat-button {
 }
 
 header > .top-nav .mat-button:hover {
-   background: $blue;
+   background: #2867DE;
 }
 
 header > .top-nav .mat-button > .mat-button-focus-overlay {
@@ -188,7 +188,7 @@ header > .top-nav .right-nav > .social > img {
 }
 
 header > .main-nav {
-   background-color: $white;
+   background-color: #FFFFFF;
    height: $main-mat-navbar-height;
 }
 
@@ -224,6 +224,12 @@ header > .main-nav .mat-navbar > li > a {
    line-height: $main-mat-navbar-height;
 }
 
+header .mat-nav li:hover::after,
+header .mat-nav li:hover > a,{
+   color: #FF3450;
+   background: none !important;
+}
+
 header > .main-nav .shopping-button {
    display: flex;
    position: relative;
@@ -235,7 +241,7 @@ header > .main-nav .shopping-button {
 }
 
 header > .main-nav .shopping-button > i.material-icons {
-   color: $blue;
+   color: #2867DE;
    width: $main-mat-navbar-height;
    height: $main-mat-navbar-height;
    line-height: $main-mat-navbar-height;
@@ -244,9 +250,9 @@ header > .main-nav .shopping-button > i.material-icons {
 
 header > .main-nav .shopping-button > .mat-button {
    height: 25px;
-   color: $white;
+   color: #FFFFFF;
    min-width: 55px;
-   background: $red;
+   background: #FF3450;
    line-height: 25px;
    top: 55% !important;
    position: absolute !important;

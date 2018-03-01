@@ -1,58 +1,59 @@
 .newsletter {
    background: #f3f3f3;
-   padding: 70px 0 50px 0;
-}
+   padding: 70px 0 50px;
 
-.newsletter > .container {
-   display: flex;
-}
+   > .container {
+      display: flex;
 
-.newsletter > .container > div:nth-child(1) {
-   flex: 0 0 25%;
-}
+      > div {
+         &:nth-child(1) {
+            flex: 0 0 25%;
+         }
 
-.newsletter > .container > div:nth-child(2) {
-   flex: 0 0 75%;
-}
+         &:nth-child(2) {
+            flex: 0 0 75%;
 
-.newsletter > .container > div:nth-child(2) > form {
-   display: flex;
-}
+            > form {
+               display: flex;
+            }
 
-.newsletter > .container > div:nth-child(2) .input-group {
-   flex: 0 0 80%;
-   padding: 0 10%;
-}
+            .input-group {
+               flex: 0 0 80%;
+               padding: 0 10%;
+            }
 
-.newsletter > .container > div:nth-child(2) .input-actions {
-   flex: 0 0 20%;
-   padding: 0 5%;
-}
+            .input-actions {
+               flex: 0 0 20%;
+               padding: 0 5%;
+            }
 
-.newsletter > .container > div:nth-child(2) .mat-button {
-   height: 34px;
-   color: $white;
-   min-width: 90px;
-   font-size: 12px;
-   font-weight: 700;
-   background: $red;
-   line-height: 34px;
-   text-align: center;
-   flex: 0 0 calc(100% / 4);
-   text-transform: uppercase;
-}
+            .mat-button {
+               height: 34px;
+               color: #FFFFFF;
+               min-width: 90px;
+               font-size: 12px;
+               font-weight: 700;
+               background: #FF3450;
+               line-height: 34px;
+               text-align: center;
+               flex: 0 0 calc(100% / 4);
+               text-transform: uppercase;
+            }
+         }
+      }
+   }
 
-.newsletter h2,
-.newsletter p {
-   margin: 0;
-   margin-bottom: 10px;
-}
+   h2,
+   p {
+      margin: 0 0 10px;
+   }
 
-.newsletter h2 {
-   font-size: 30px;
-}
+   h2 {
+      font-size: 30px;
+   }
 
-.newsletter p {
-   font-size: 14px;
-   line-height: 22px;
+   p {
+      font-size: 14px;
+      line-height: 22px;
+   }
 }

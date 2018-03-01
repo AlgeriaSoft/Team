@@ -304,7 +304,7 @@ template, [hidden] {
   r: 45%;
   cx: 50%;
   cy: 50%;
-  stroke: #FF3450;
+  stroke: #FFFFFF;
   fill: transparent;
   stroke-width: 10%;
   animation-duration: 4s;
@@ -495,6 +495,16 @@ template, [hidden] {
   transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
+.input-group .underline:after, .input-group .underline:before {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  background: #FF3450;
+  position: absolute;
+  transition: 0.2s ease all;
+}
+
 .input-group {
   position: relative;
   margin-bottom: 45px;
@@ -520,6 +530,20 @@ template, [hidden] {
   outline: none;
 }
 
+.input-group input:focus ~ label {
+  top: -20px;
+  color: #FF3450;
+  font-size: 12px;
+}
+
+.input-group input:focus ~ .underline:after {
+  width: 50%;
+}
+
+.input-group input:focus ~ .underline:before {
+  width: 50%;
+}
+
 .input-group label {
   top: 10px;
   left: 5px;
@@ -531,40 +555,18 @@ template, [hidden] {
   transition: 0.2s ease all;
 }
 
-.input-group input:focus ~ label {
-  top: -20px;
-  color: #FF3450;
-  font-size: 12px;
-}
-
 .input-group .underline {
   width: 100%;
   display: block;
   position: relative;
 }
 
-.input-group .underline:after,
-.input-group .underline:before {
-  content: '';
-  height: 2px;
-  width: 0;
-  bottom: 1px;
-  background: #FF3450;
-  position: absolute;
-  transition: 0.2s ease all;
-}
-
-.input-group .underline:before {
-  left: 50%;
-}
-
 .input-group .underline:after {
   right: 50%;
 }
 
-.input-group input:focus ~ .underline:after,
-.input-group input:focus ~ .underline:before {
-  width: 50%;
+.input-group .underline:before {
+  left: 50%;
 }
 
 .mat-button {
@@ -813,10 +815,6 @@ template, [hidden] {
   -webkit-tap-highlight-color: transparent;
 }
 
-.mat-dropdown-menu > .mat-dropdown-menu-content > .mat-dropdown-menu-inner > .mat-dropdown-menu-item:hover {
-  background: rgba(0, 0, 0, 0.5);
-}
-
 .mat-dropdown-menu > .mat-dropdown-menu-content > .mat-dropdown-menu-inner > .mat-dropdown-menu-item-submenu {
   overflow: unset;
   padding-right: 32px;
@@ -1063,6 +1061,12 @@ header > .main-nav .mat-navbar > li {
 header > .main-nav .mat-navbar > li > a {
   height: 100px;
   line-height: 100px;
+}
+
+header > .main-nav li:hover::after,
+header > .main-nav li:hover > a {
+  color: #FF3450;
+  background: none !important;
 }
 
 header > .main-nav .shopping-button {
@@ -2112,6 +2116,14 @@ footer {
   background: #333333;
 }
 
+footer a:hover {
+  color: #FF3450 !important;
+}
+
+footer svg:hover {
+  fill: #FF3450 !important;
+}
+
 footer .footer-top {
   padding-top: 80px;
 }
@@ -2141,6 +2153,7 @@ footer .footer-top ul > li {
 
 footer .footer-top ul > li > a {
   color: #7F7F7F;
+  font-weight: 500;
   text-decoration: none;
 }
 

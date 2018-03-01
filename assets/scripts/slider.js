@@ -48,10 +48,7 @@ export class Slider {
 
    navLeft(e) {
       if (this.currentSlide - 1 < 0) {
-         if (!this.infinity) {
-            return;
-         }
-         this.currentSlide = this.slideCount;
+         this.currentSlide = 0;
       }
       this.currentSlide--;
       this.slider.css('transform', `translateX(${this.slider.find('.slider-item').eq(this.currentSlide).get(0).offsetLeft * -1}px)`);
@@ -59,9 +56,6 @@ export class Slider {
 
    navRight(e) {
       if (this.currentSlide + 1 === this.slideCount) {
-         if (!this.infinity) {
-            return;
-         }
          this.currentSlide = 0;
       }
       this.currentSlide++;

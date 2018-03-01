@@ -2,115 +2,123 @@
    padding-top: 80px;
    background: #f3f3f3;
    padding-bottom: 50px;
-}
 
-.recent-cause a:hover {
-   color: $red;
-}
+   a:hover {
+      color: #FF3450;
+   }
 
-.recent-cause .cause-lists {
-   display: flex;
-}
+   .cause-lists {
+      display: flex;
+   }
 
-.recent-cause .cause-item {
-   min-height: 1px;
-   position: relative;
-   padding-left: 15px;
-   margin-bottom: 50px;
-   padding-right: 15px;
-   width: calc(100% / 3);
-}
+   .cause-item {
+      min-height: 1px;
+      position: relative;
+      padding-left: 15px;
+      margin-bottom: 50px;
+      padding-right: 15px;
+      width: calc(100% / 3);
 
-.recent-cause .cause-item > .cause-item-image {
-   border: 0;
-   width: 100%;
-   max-width: 100%;
-   vertical-align: middle;
-}
+      > {
+         .cause-item-image {
+            border: 0;
+            width: 100%;
+            max-width: 100%;
+            vertical-align: middle;
+         }
 
-.recent-cause .cause-item > .cause-item-summary {
-   overflow: hidden;
-   position: relative;
-   background: $white;
-   padding: 30px 30px 35px;
-}
+         .cause-item-summary {
+            overflow: hidden;
+            position: relative;
+            background: #FFFFFF;
+            padding: 30px 30px 35px;
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content {
-   margin-right: 30px;
-}
+            > {
+               .cause-item-content {
+                  margin-right: 30px;
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content > .cause-item-title {
-   margin-top: 0;
-   font-size: 24px;
-   font-weight: 700;
-   line-height: 30px;
-   margin-bottom: 10px;
-}
+                  > {
+                     .cause-item-title {
+                        margin-top: 0;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 30px;
+                        margin-bottom: 10px;
+                     }
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content > .cause-item-location,
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content > .cause-item-tags {
-   display: flex;
-   color: #7f7f7f;
-   font-weight: 500;
-   margin-bottom: 8px;
-}
+                     .cause-item-location,
+                     .cause-item-tags {
+                        display: flex;
+                        color: #7f7f7f;
+                        font-weight: 500;
+                        margin-bottom: 8px;
+                     }
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content > .cause-item-location > .icon,
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content > .cause-item-tags > .icon {
-   width: 20px;
-   height: 20px;
-   margin-right: 10px;
-}
+                     .cause-item-location > .icon,
+                     .cause-item-tags > .icon {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                     }
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content > .cause-item-location > .icon > svg,
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content > .cause-item-tags > .icon > svg {
-   width: auto;
-   height: auto;
-   fill: #7f7f7f;
-   max-width: 20px;
-   max-height: 20px;
-}
+                     .cause-item-location > .icon > svg,
+                     .cause-item-tags > .icon > svg {
+                        width: auto;
+                        height: auto;
+                        fill: #7f7f7f;
+                        max-width: 20px;
+                        max-height: 20px;
+                     }
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content > .mat-button {
-   color: $white;
-   margin-top: 40px;
-   background: $blue;
-   text-transform: uppercase;
-}
+                     .mat-button {
+                        color: #FFFFFF;
+                        margin-top: 40px;
+                        background: #2867DE;
+                        text-transform: uppercase;
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-content > .mat-button:hover {
-   background: $red;
-}
+                        &:hover {
+                           background: #FF3450;
+                        }
+                     }
+                  }
+               }
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-funding {
-   right: 25px;
-   width: 30px;
-   margin-top: 10px;
-   position: absolute;
-   text-align: center;
-}
+               .cause-item-funding {
+                  right: 25px;
+                  width: 30px;
+                  margin-top: 10px;
+                  position: absolute;
+                  text-align: center;
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-funding > .fund-line {
-   width: 10px;
-   height: 150px;
-   margin-left: auto;
-   margin-right: auto;
-   position: relative;
-   border-radius: 30px;
-   background: rgba($red, 0.2);
-}
+                  > {
+                     .fund-line {
+                        width: 10px;
+                        height: 150px;
+                        margin-left: auto;
+                        margin-right: auto;
+                        position: relative;
+                        border-radius: 30px;
+                        background: rgba(#FF3450, 0.2);
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-funding > .fund-line > .fund-line-fill {
-   left: 0;
-   bottom: 0;
-   height: 65%;
-   width: 10px;
-   background: $red;
-   position: absolute;
-   border-radius: 30px;
-}
+                        > .fund-line-fill {
+                           left: 0;
+                           bottom: 0;
+                           height: 65%;
+                           width: 10px;
+                           background: #FF3450;
+                           position: absolute;
+                           border-radius: 30px;
+                        }
+                     }
 
-.recent-cause .cause-item > .cause-item-summary > .cause-item-funding > .fund-percent {
-   color: $red;
-   padding-top: 12px;
+                     .fund-percent {
+                        color: #FF3450;
+                        padding-top: 12px;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
 }

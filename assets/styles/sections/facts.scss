@@ -4,63 +4,67 @@
    background-size: cover;
    background-position: center center;
    background-image: url("../multimedia/images/fun-fact.jpg");
-}
 
-.facts > .fact-item {
-   min-height: 1px;
-   overflow: hidden;
-   padding: 60px 15px;
-   text-align: center;
-   position: relative;
-   width: calc(100% / 4);
-}
+   > .fact-item {
+      min-height: 1px;
+      overflow: hidden;
+      padding: 60px 15px;
+      text-align: center;
+      position: relative;
+      width: calc(100% / 4);
 
-.facts > .fact-item > .fact-overlay {
-   top: 0;
-   right: 0;
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   background: rgba($red,0.8);
-}
+      > .fact-overlay {
+         top: 0;
+         right: 0;
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         background: rgba(#FF3450, 0.8);
+      }
 
-.facts > .fact-item:nth-child(even) > .fact-overlay {
-   background: rgba($blue,0.8);
-}
+      &:nth-child(even) > .fact-overlay {
+         background: rgba(#2867DE, 0.8);
+      }
 
-.facts > .fact-item > .fact-item-content {
-   display: flex;
-   justify-content: center;
-}
+      > .fact-item-content {
+         display: flex;
+         justify-content: center;
 
-.facts > .fact-item > .fact-item-content > .fact-item-icon {
-   width: 50px;
-   height: 50px;
-   color: #ffffff;
-   overflow: hidden;
-   position: relative;
-   margin-right: 15px;
-   align-self: center;
-}
+         > {
+            .fact-item-icon {
+               width: 50px;
+               height: 50px;
+               color: #ffffff;
+               overflow: hidden;
+               position: relative;
+               margin-right: 15px;
+               align-self: center;
 
-.facts > .fact-item > .fact-item-content > .fact-item-icon > svg {
-   width: auto;
-   height: auto;
-   fill: $white;
-   max-width: 50px;
-   max-height: 50px;
-}
+               > svg {
+                  width: auto;
+                  height: auto;
+                  fill: #FFFFFF;
+                  max-width: 50px;
+                  max-height: 50px;
+               }
+            }
 
-.facts > .fact-item > .fact-item-content > .fact-item-details > .fact-item-count {
-   color: #fff;
-   font-size: 32px;
-   font-weight: 700;
-   line-height: 38px;
-   position: relative;
-}
+            .fact-item-details > {
+               .fact-item-count {
+                  color: #fff;
+                  font-size: 32px;
+                  font-weight: 700;
+                  line-height: 38px;
+                  position: relative;
+               }
 
-.facts > .fact-item > .fact-item-content > .fact-item-details > .fact-item-info {
-   color: #fff;
-   margin-top: 5px;
-   position: relative;
+               .fact-item-info {
+                  color: #fff;
+                  margin-top: 5px;
+                  position: relative;
+               }
+            }
+         }
+      }
+   }
 }

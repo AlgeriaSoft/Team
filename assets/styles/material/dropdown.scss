@@ -102,10 +102,6 @@
             text-overflow: ellipsis;
             background: transparent;
             -webkit-tap-highlight-color: transparent;
-
-            &:hover {
-               background: rgba(#000000, 0.5);
-            }
          }
 
          .mat-dropdown-menu-item-submenu {

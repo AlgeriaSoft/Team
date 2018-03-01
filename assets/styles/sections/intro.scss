@@ -1,23 +1,23 @@
 .intro {
    padding: 100px 0;
-}
 
-.intro > .container {
-   padding-left: 15%;
-   padding-right: 15%;
-}
+   > .container {
+      padding-left: 15%;
+      padding-right: 15%;
+   }
 
-.intro h1 {
-   margin-top: 0;
-   font-size: 36px;
-   font-weight: 300;
-   margin: 0.67em 0 60px;
-}
+   h1 {
+      margin-top: 0;
+      font-size: 36px;
+      font-weight: 300;
+      margin: 0.67em 0 60px;
+   }
 
-.intro p {
-   color: #7f7f7f;
-   font-size: 18px;
-   margin: 0 0 10px;
-   line-height: 30px;
-   text-align: center;
+   p {
+      color: #7f7f7f;
+      font-size: 18px;
+      margin: 0 0 10px;
+      line-height: 30px;
+      text-align: center;
+   }
 }

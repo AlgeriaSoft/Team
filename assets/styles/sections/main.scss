@@ -5,13 +5,13 @@
    width: 35px !important;
    height: 35px !important;
    position: fixed !important;
-   background: $red !important;
-}
+   background: #FF3450 !important;
 
-.scroll-button > .mat-button-text {
-   padding: 0 !important;
-   color: $white !important;
-   line-height: 35px !important;
+   > .mat-button-text {
+      padding: 0 !important;
+      color: #FFFFFF !important;
+      line-height: 35px !important;
+   }
 }
 
 .section-title {
@@ -27,38 +27,38 @@
    padding-right: 15px;
    padding-bottom: 45px;
    text-transform: uppercase;
-}
 
-.section-title::before {
-   left: 50%;
-   content: "";
-   height: 5px;
-   width: 170px;
-   bottom: 12px;
-   background: $red;
-   position: absolute;
-   transform: translateX(-50%);
-}
+   &::before {
+      left: 50%;
+      content: "";
+      height: 5px;
+      width: 170px;
+      bottom: 12px;
+      background: #FF3450;
+      position: absolute;
+      transform: translateX(-50%);
+   }
 
-.section-title > .section-title-icon {
-   bottom: 0;
-   left: 50%;
-   z-index: 9;
-   width: 30px;
-   height: 30px;
-   background: $red;
-   line-height: 30px;
-   position: absolute;
-   border-radius: 15px;
-   transform: translateX(-15px);
-}
+   > .section-title-icon {
+      bottom: 0;
+      left: 50%;
+      z-index: 9;
+      width: 30px;
+      height: 30px;
+      background: #FF3450;
+      line-height: 30px;
+      position: absolute;
+      border-radius: 15px;
+      transform: translateX(-15px);
 
-.section-title > .section-title-icon > i.material-icons {
-   width: 30px;
-   height: 30px;
-   color: $white;
-   font-size: 14px;
-   line-height: 30px;
-   position: absolute;
-   transform: translateX(-15px);
+      > i.material-icons {
+         width: 30px;
+         height: 30px;
+         color: #FFFFFF;
+         font-size: 14px;
+         line-height: 30px;
+         position: absolute;
+         transform: translateX(-15px);
+      }
+   }
 }
