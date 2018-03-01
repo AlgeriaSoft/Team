@@ -25,8 +25,8 @@ export class Slider {
       }
 
       if (buttonNav) {
-         this.slider.parent().find('.slider-controls-nav .left').click(this.navLeft.bind(this));
-         this.slider.parent().find('.slider-controls-nav .right').click(this.navRight.bind(this));
+         this.slider.parent().find('.slider-controls-nav .nav-left').click(this.navLeft.bind(this));
+         this.slider.parent().find('.slider-controls-nav .nav-right').click(this.navRight.bind(this));
       }
    }
 

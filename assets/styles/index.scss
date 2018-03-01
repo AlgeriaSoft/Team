@@ -150,17 +150,17 @@ input[type='button'].disabled {
 .preload {
    top: 0;
    left: 0;
+   opacity: 1;
    width: 100%;
    height: 100%;
-   background: $blue;
-   position: absolute;
+   position: fixed;
+   background: $red;
    visibility: visible;
 }
 
 .preload-content {
-   opacity: 1;
+   opacity: 0;
    visibility: hidden;
-   transition: all 0.5s linear;
 }
 
 .container {
@@ -169,16 +169,19 @@ input[type='button'].disabled {
    padding-left: 15px;
    padding-right: 15px;
 }
+
 @media (min-width: 768px) {
    .container {
       width: 750px;
    }
 }
+
 @media (min-width: 992px) {
    .container {
       width: 970px;
    }
 }
+
 @media (min-width: 1200px) {
    .container {
       width: 1170px;
