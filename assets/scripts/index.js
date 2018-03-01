@@ -10,7 +10,8 @@ import {
 import {
    Material
 } from './material.js';
-new $(document).ready(function(e) {
+
+new $(window).on('load', function() {
    /*
       Show page
     */
@@ -20,6 +21,9 @@ new $(document).ready(function(e) {
       document.querySelector('.preload').style.height = '0';
       document.querySelector('.preload').style.visibility = 'hidden';
    }, 2000);
+})
+new $(document).ready(function(e) {
+
    /*
       Stiky header
     */
