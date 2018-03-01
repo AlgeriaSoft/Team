@@ -3,9 +3,9 @@ import {
 } from '../$.js';
 export class Ripple {
    static show(e) {
-      if ($.current) {
-         const current = $.current;
-         $.current = null;
+      if (Ripple.current) {
+         const current = Ripple.current;
+         Ripple.current = null;
          setTimeout(function() {
             current.remove();
          }, 800);
@@ -37,20 +37,20 @@ export class Ripple {
          'width': `${size * 2}px`,
          'height': `${size * 2}px`,
       });
-      $.current = ripple;
-      $.timeout = setTimeout(function() {
+      Ripple.current = ripple;
+      Ripple.timeout = setTimeout(function() {
          ripple.css({
             'transform': `scale(1)`
          });
       }, 16);
       document.onpointerup = document.onpointercancel = function() {
          document.onpointerup = document.onpointercancel = document.onpointermove = null;
-         $.current.css('opacity', '0');
+         Ripple.current.css('opacity', '0');
       };
 
       document.onpointermove = function(move) {
          if (e.x - move.x > 4 || e.x - move.x < -4 || e.y - move.y > 4 || e.y - move.y < -4) {
-            clearTimeout($.timeout);
+            clearTimeout(Ripple.timeout);
             document.onpointercancel();
          }
       };
