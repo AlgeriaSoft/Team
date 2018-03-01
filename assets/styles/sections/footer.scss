@@ -1,0 +1,115 @@
+footer {
+   color: #7f7f7f;
+   background: #333333;
+}
+
+footer .footer-top {
+   padding-top: 80px;
+}
+
+footer .footer-top > .container {
+   display: flex;
+}
+
+footer .footer-top .footer-title {
+   color: $white;
+   font-size: 24px;
+   margin-bottom: 0;
+   margin-top: 15px;
+   font-weight: 500;
+   padding-bottom: 45px;
+}
+
+footer .footer-top ul {
+   margin: 0;
+   padding: 0;
+}
+
+footer .footer-top ul > li {
+   list-style: none;
+   padding-bottom: 7px;
+}
+
+footer .footer-top ul > li > a {
+   color: #7F7F7F;
+   text-decoration: none;
+}
+
+footer > .footer-top .footer-widget {
+   min-height: 1px;
+   position: relative;
+   padding-left: 15px;
+   padding-right: 15px;
+   padding-bottom: 50px;
+   flex: 0 0 calc(100% /4);
+}
+
+footer > .footer-top .footer-widget.footer-logo > img {
+   margin-top: 20px;
+   max-width: 184px;
+   padding-bottom: 10px;
+}
+
+footer > .footer-top .footer-widget.footer-logo > p {
+   font-size: 14px;
+   margin: 0 0 10px;
+   line-height: 22px;
+   margin-bottom: 30px;
+}
+
+footer > .footer-top .footer-widget.footer-logo > .footer-social {
+   display: flex;
+}
+
+footer > .footer-top .footer-widget.footer-logo > .footer-social > a {
+   width: 35px;
+   height: 35px;
+   display: block;
+   padding-right: 10px;
+}
+
+footer > .footer-top .footer-widget.footer-logo > .footer-social > a > svg {
+   width: auto;
+   height: auto;
+   fill: #7F7F7F;
+   max-width: 35px;
+   max-height: 35px;
+   padding-right: 10px;
+}
+
+footer > .footer-top .footer-widget.footer-address > p {
+   font-size: 14px;
+   margin: 0 0 10px;
+   line-height: 22px;
+}
+
+footer > .footer-top .footer-widget.footer-address > p > span {
+   display: flex;
+   flex: 0 0 100%;
+}
+
+footer > .footer-top .footer-widget.footer-address i.material-icons {
+   font-size: 15px;
+   align-self: center;
+   padding-right: 10px;
+}
+
+footer > .footer-top .footer-widget.footer-address > .footer-map {
+   font-weight: bold;
+   padding-top: 20px;
+}
+
+footer > .footer-top .footer-widget.footer-address > .footer-map > a {
+   display: flex;
+}
+
+footer > .footer-bottom {
+   padding: 30px 0;
+   border-top: 1px solid #555;
+}
+
+footer > .footer-bottom span {
+   color: #7f7f7f;
+   font-weight: 500;
+   padding-right: 20px;
+}

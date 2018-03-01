@@ -1,0 +1,58 @@
+.newsletter {
+   background: #f3f3f3;
+   padding: 70px 0 50px 0;
+}
+
+.newsletter > .container {
+   display: flex;
+}
+
+.newsletter > .container > div:nth-child(1) {
+   flex: 0 0 25%;
+}
+
+.newsletter > .container > div:nth-child(2) {
+   flex: 0 0 75%;
+}
+
+.newsletter > .container > div:nth-child(2) > form {
+   display: flex;
+}
+
+.newsletter > .container > div:nth-child(2) .input-group {
+   flex: 0 0 80%;
+   padding: 0 10%;
+}
+
+.newsletter > .container > div:nth-child(2) .input-actions {
+   flex: 0 0 20%;
+   padding: 0 5%;
+}
+
+.newsletter > .container > div:nth-child(2) .mat-button {
+   height: 34px;
+   color: $white;
+   min-width: 90px;
+   font-size: 12px;
+   font-weight: 700;
+   background: $red;
+   line-height: 34px;
+   text-align: center;
+   flex: 0 0 calc(100% / 4);
+   text-transform: uppercase;
+}
+
+.newsletter h2,
+.newsletter p {
+   margin: 0;
+   margin-bottom: 10px;
+}
+
+.newsletter h2 {
+   font-size: 30px;
+}
+
+.newsletter p {
+   font-size: 14px;
+   line-height: 22px;
+}

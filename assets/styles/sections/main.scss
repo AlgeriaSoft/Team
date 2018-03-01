@@ -1,0 +1,64 @@
+.scroll-button {
+   right: 25px;
+   bottom: 25px;
+   display: none;
+   width: 35px !important;
+   height: 35px !important;
+   position: fixed !important;
+   background: $red !important;
+}
+
+.scroll-button > .mat-button-text {
+   padding: 0 !important;
+   color: $white !important;
+   line-height: 35px !important;
+}
+
+.section-title {
+   width: 100%;
+   font-size: 36px;
+   font-weight: 300;
+   margin-top: 15px;
+   line-height: 36px;
+   text-align: center;
+   position: relative;
+   padding-left: 15px;
+   margin-bottom: 50px;
+   padding-right: 15px;
+   padding-bottom: 45px;
+   text-transform: uppercase;
+}
+
+.section-title::before {
+   left: 50%;
+   content: "";
+   height: 5px;
+   width: 170px;
+   bottom: 12px;
+   background: $red;
+   position: absolute;
+   transform: translateX(-50%);
+}
+
+.section-title > .section-title-icon {
+   bottom: 0;
+   left: 50%;
+   z-index: 9;
+   width: 30px;
+   height: 30px;
+   background: $red;
+   line-height: 30px;
+   position: absolute;
+   border-radius: 15px;
+   transform: translateX(-15px);
+}
+
+.section-title > .section-title-icon > i.material-icons {
+   width: 30px;
+   height: 30px;
+   color: $white;
+   font-size: 14px;
+   line-height: 30px;
+   position: absolute;
+   transform: translateX(-15px);
+}

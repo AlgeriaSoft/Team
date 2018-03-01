@@ -1,37 +1,41 @@
+:root {
+   --progress-size: 150px;
+}
+
 .progess {
    display: block;
    position: relative;
-   width: $progess-size;
-   height: $progess-size;
-}
+   width: var(--progress-size);
+   height: var(--progress-size);
 
-.progess > svg {
-   top: 0;
-   left: 0;
-   overflow: visible;
-   position: absolute;
-   width: $progess-size;
-   height: $progess-size;
-   transform: rotate(-90deg);
-   transform-origin: center;
-   animation: progress-rotate 2s linear infinite;
-}
+   > svg {
+      top: 0;
+      left: 0;
+      overflow: visible;
+      position: absolute;
+      transform: rotate(-90deg);
+      transform-origin: center;
+      width: var(--progress-size);
+      height: var(--progress-size);
+      animation: progress-rotate 2s linear infinite;
 
-.progess > svg circle {
-   r: 45%;
-   cx: 50%;
-   cy: 50%;
-   stroke: $indigo;
-   fill: transparent;
-   stroke-width: 10%;
-   animation-duration: 4s;
-   transform-origin: center;
-   transition-property: stroke;
-   stroke-dasharray: 282.743px;
-   animation-iteration-count: infinite;
-   transition: stroke-dashoffset 225ms linear;
-   animation-name: progress-stroke-rotate-100;
-   animation-timing-function: cubic-bezier(.35,0,.25,1);
+      circle {
+         r: 45%;
+         cx: 50%;
+         cy: 50%;
+         stroke: $white;
+         fill: transparent;
+         stroke-width: 10%;
+         animation-duration: 4s;
+         transform-origin: center;
+         transition-property: stroke;
+         stroke-dasharray: 282.743px;
+         animation-iteration-count: infinite;
+         transition: stroke-dashoffset 225ms linear;
+         animation-name: progress-stroke-rotate-100;
+         animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1);
+      }
+   }
 }
 @keyframes progress-rotate {
    0% {

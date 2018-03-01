@@ -5,11 +5,23 @@
 @import '../vendor/fonts/roboto/roboto.min.scss';
 @import '../vendor/fonts/material-design-icons/material-icons.min.scss';
 @import 'scrollbar.scss';
-@import 'animations/ripple.scss';
 @import 'animations/animate.scss';
 @import 'animations/progress.scss';
 @import 'transitions/transition.scss';
+@import 'material/index.scss';
 @import 'sections/header.scss';
+@import 'sections/main.scss';
+@import 'sections/home-slider.scss';
+@import 'sections/facts.scss';
+@import 'sections/intro.scss';
+@import 'sections/recent-cause.scss';
+@import 'sections/upcoming-events.scss';
+@import 'sections/latest.scss';
+@import 'sections/photos.scss';
+@import 'sections/our-client.scss';
+@import 'sections/call-to-action.scss';
+@import 'sections/testimonials.scss';
+@import 'sections/newsletter.scss';
 @import 'sections/footer.scss';
 
 *,
@@ -19,14 +31,15 @@
 }
 
 html {
-   font-weight: normal;
-   color: $white !important;
+   color: #555;
+   font-size: 14px;
+   line-height: 22px;
    font-family: 'Roboto', sans-serif;
 }
 
 body {
+   overflow-x: hidden;
    padding: 0 !important;
-   overflow: hidden !important;
    background: $body-background !important;
 }
 
@@ -40,6 +53,12 @@ a {
    }
 }
 
+a,
+a:after,
+a:before {
+   transition: all 0.25s linear;
+}
+
 .cursor-pointer,
 a,
 button,
@@ -49,21 +68,17 @@ input[type='button'] {
    cursor: pointer !important;
 }
 
-.container {}
-// .preload + .container {
-//    opacity: 0;
-//    visibility: hidden;
-//    transition: all 0.4s ease;
-//    -webkit-transition: none !important;
-// }
+.cursor-default,
+a.disabled,
+button[disabled],
+input[type='reset'].disabled,
+input[type='submit'].disabled,
+input[type='button'].disabled {
+   cursor: default !important;
+}
 
-.preload {
-   top: 0;
-   left: 0;
-   width: 100%;
-   height: 100%;
-   position: absolute;
-   visibility: visible;
+.cursor-text {
+   cursor: text !important;
 }
 
 .spacer {
@@ -116,14 +131,6 @@ input[type='button'] {
    background-position: center center !important;
 }
 
-.cursor-text {
-   cursor: text !important;
-}
-
-.cursor-default {
-   cursor: default !important;
-}
-
 .align-left {
    text-align: left !important;
 }
@@ -138,4 +145,42 @@ input[type='button'] {
 
 .align-justify {
    text-align: justify !important;
+}
+
+.preload {
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: $blue;
+   position: absolute;
+   visibility: visible;
+}
+
+.preload-content {
+   opacity: 1;
+   visibility: hidden;
+   transition: all 0.5s linear;
+}
+
+.container {
+   margin-right: auto;
+   margin-left: auto;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+@media (min-width: 768px) {
+   .container {
+      width: 750px;
+   }
+}
+@media (min-width: 992px) {
+   .container {
+      width: 970px;
+   }
+}
+@media (min-width: 1200px) {
+   .container {
+      width: 1170px;
+   }
 }

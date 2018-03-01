@@ -1,0 +1,26 @@
+.our-client {
+   padding-top: 80px;
+   background: #f3f3f3;
+   padding-bottom: 85px;
+}
+
+.our-client .our-client-content {
+   display: flex;
+}
+
+.our-client .our-client-content > div.item {
+   min-height: 1px;
+   position: relative;
+   padding-left: 15px;
+   padding-right: 15px;
+   width: calc(100% / 6);
+}
+
+.our-client .our-client-content > div.item > img {
+   border: 0;
+   margin: 15px 0;
+   padding: 0 25px;
+   max-width: 100%;
+   background: $white;
+   vertical-align: middle;
+}

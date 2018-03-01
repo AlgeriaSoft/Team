@@ -10,48 +10,771 @@
    <script src='assets/scripts/index.js' type='module'></script>
 </head>
 
-<body>
-   <!-- <div class='preload'>
+<body class='no-select'>
+   <div class='preload'>
       <div class='progess center'>
          <svg focusable='false' preserveAspectRatio='xMidYMid meet' viewBox='0 0 100 100'>
             <circle></circle>
          </svg>
       </div>
-   </div> -->
-   <div class='container'>
-      <header>
+   </div>
+   <div class="preload-content">
+      <header id='header'>
          <div class='top-nav'>
-            <div>
-               <div class='phone'>
-                  <i class='material-icons'></i>+ 215 1256 845
+            <div class='container'>
+               <div>
+                  <div class='phone left'>
+                     <i class='material-icons left'>phone_in_talk</i>
+                     <span class='right'>+ 215 1256 845</span>
+                  </div>
+                  <div class='email left'>
+                     <i class='material-icons left'>mail</i>
+                     <span class='right'>info@becharity.com</span>
+                  </div>
+                  <button class='mat-button mat-ripple-container mat-ripple-white'>
+                  <span class='mat-button-text'>DONATE</span>
+                  <div class='mat-button-focus-overlay'></div>
+               </button>
                </div>
-               <div class='email'>
-                  <i class='material-icons'></i>info@becharity.com
+               <div>
+                  <form class="search-form">
+                     <div class="input-group">
+                        <div class="input-inner">
+                           <input type="text">
+                           <span class="underline"></span>
+                           <label>Search products</label>
+                        </div>
+                     </div>
+                     <div class="input-actions">
+                        <button class="mat-button mat-ripple-container" type="submit">
+                        <span class="mat-button-text">Search</span>
+                        <div class="mat-button-focus-overlay"></div>
+                     </button>
+                     </div>
+                  </form>
                </div>
-               <a href='donation.html' class='btn btn-red'>Donate</a>
-            </div>
-            <div class='search-field'>
-               <div class='left'>
-                  <input id='search' type='text' />
-                  <label for='search'>Search products</label>
-                  <div class='underline'></div>
-               </div>
-               <div class='right'>
-                  <svg class='center' xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'><path d='M31 28h-1.59l-.55-.55C30.82 25.18 32 22.23 32 19c0-7.18-5.82-13-13-13S6 11.82 6 19s5.82 13 13 13c3.23 0 6.18-1.18 8.45-3.13l.55.55V31l10 9.98L40.98 38 31 28zm-12 0c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z'/></svg>
-               </div>
-            </div>
-            <div>
-               <a class='join-top' href='login.html'><i class='fa fa-user-circle'></i>JOIN</a>
-               <div class='social'>
-                  <a class='icon-facebook' href='#'><i class='fa fa-facebook-square'></i></a>
-                  <a class='icon-twitter' href='#'><i class='fa fa-twitter-square'></i></a>
-                  <a class='icon-pinterest' href='#'><i class='fa fa-pinterest-square'></i></a>
-                  <a class='icon-google-plus' href='#'><i class='fa fa-google-plus-square'></i></a>
+               <div class='right-nav'>
+                  <ul class='mat-navbar'>
+                     <li class='mat-dropdown-menu'>
+                        <img src='assets/multimedia/icons/world.svg'>
+                        <a>ENG</a>
+                        <ul class='mat-dropdown-menu-content'>
+                           <div class='mat-dropdown-menu-inner'>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>SPN</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>GER</a></li>
+                           </div>
+                        </ul>
+                     </li>
+                     <li class='mat-dropdown-menu'>
+                        <img src='assets/multimedia/icons/world.svg'>
+                        <a>URO</a>
+                        <ul class='mat-dropdown-menu-content'>
+                           <div class='mat-dropdown-menu-inner'>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>USD</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>AUD</a></li>
+                           </div>
+                        </ul>
+                     </li>
+                  </ul>
+                  <a class='join'><i class='material-icons'>account_circle</i>JOIN</a>
+                  <div class='social'>
+                     <img src='assets/multimedia/icons/facebook.svg'>
+                     <img src='assets/multimedia/icons/twitter.svg'>
+                     <img src='assets/multimedia/icons/pinterest.svg'>
+                     <img src='assets/multimedia/icons/google.svg'>
+                  </div>
                </div>
             </div>
          </div>
-         <div class='main-nav'></div>
+         <div class='main-nav'>
+            <div class='container'>
+               <a class='logo mat-ripple-container'>
+               <img class='retina' src='assets/multimedia/images/logo.png' alt='logo'>
+            </a>
+               <nav>
+                  <ul class='mat-navbar left'>
+                     <li class='mat-ripple-container'><a>Home</a></li>
+                     <li class='mat-dropdown-menu'>
+                        <a>Page</a>
+                        <ul class='mat-dropdown-menu-content'>
+                           <div class='mat-dropdown-menu-inner'>
+                              <li class='mat-dropdown-menu-item mat-dropdown-menu-item-submenu mat-dropdown-menu mat-dropdown-submenu'>
+                                 <a>Cause</a>
+                                 <ul class='mat-dropdown-menu-content'>
+                                    <div class='mat-dropdown-menu-inner'>
+                                       <li class='mat-dropdown-menu-item mat-ripple-container'><a>Cause</a></li>
+                                       <li class='mat-dropdown-menu-item mat-ripple-container'><a>Cause Details</a></li>
+                                    </div>
+                                 </ul>
+                              </li>
+                              <li class='mat-dropdown-menu-item mat-dropdown-menu-item-submenu mat-dropdown-menu mat-dropdown-submenu'>
+                                 <a>About</a>
+                                 <ul class='mat-dropdown-menu-content'>
+                                    <div class='mat-dropdown-menu-inner'>
+                                       <li class='mat-dropdown-menu-item mat-ripple-container'><a>About</a></li>
+                                       <li class='mat-dropdown-menu-item mat-ripple-container'><a>Our Team</a></li>
+                                       <li class='mat-dropdown-menu-item mat-ripple-container'><a>Our Pertnar</a></li>
+                                    </div>
+                                 </ul>
+                              </li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>FAQ</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Gallery</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>404 Page</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Element</a></li>
+                           </div>
+                        </ul>
+                     </li>
+                     <li class='mat-dropdown-menu'>
+                        <a>Event</a>
+                        <ul class='mat-dropdown-menu-content'>
+                           <div class='mat-dropdown-menu-inner'>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Event</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Event Details</a></li>
+                           </div>
+                        </ul>
+                     </li>
+                     <li class='mat-dropdown-menu'>
+                        <a>Blog</a>
+                        <ul class='mat-dropdown-menu-content'>
+                           <div class='mat-dropdown-menu-inner'>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Blog</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Blog 2</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Single Blog</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Search Archive</a></li>
+                           </div>
+                        </ul>
+                     </li>
+                     <li class='mat-dropdown-menu'>
+                        <a>Shop</a>
+                        <ul class='mat-dropdown-menu-content'>
+                           <div class='mat-dropdown-menu-inner'>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Shop</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Product</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Cart</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Checkout</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Login</a></li>
+                              <li class='mat-dropdown-menu-item mat-ripple-container'><a>Register</a></li>
+                           </div>
+                        </ul>
+                     </li>
+                     <li class='mat-ripple-container'><a>Contact</a></li>
+                  </ul>
+                  <div class='shopping-button right'>
+                     <i class='material-icons'>shop</i>
+                     <button class='mat-button mat-ripple-container'>
+                     <span class='mat-button-text'>$0.00</span>
+                     <div class='mat-button-focus-overlay'></div>
+                  </button>
+                  </div>
+               </nav>
+            </div>
+         </div>
       </header>
+      <div id='home-slider' class='home-slider'>
+         <div class='slider-content'>
+            <div class='slider-item'>
+               <div class='slider-item-image'><img src='assets/multimedia/images/home-slider-1.jpg' alt=''></div>
+               <div class='slider-item-content'>
+                  <div class='container'>
+                     <div class='slider-item-content-inner'>
+                        <h2>Contrary to popular rorem is simply</h2>
+                        <p>Contrary to popular belief, rorem is not simply random text. Contrary to popular belief, rorem is not simply random text.</p>
+                        <button class='mat-button mat-ripple-container'>
+                        <span class='mat-button-text'>DONET NOW</span>
+                        <div class='mat-button-focus-overlay'></div>
+                     </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class='slider-item'>
+               <div class='slider-item-image'><img src='assets/multimedia/images/home-slider-2.jpg' alt=''></div>
+               <div class='slider-item-content'>
+                  <div class='container'>
+                     <div class='slider-item-content-inner'>
+                        <h2>Contrary to popular rorem is simply</h2>
+                        <p>Contrary to popular belief, rorem is not simply random text. Contrary to popular belief, rorem is not simply random text.</p>
+                        <button class='mat-button mat-ripple-container'>
+                        <span class='mat-button-text'>DONET NOW</span>
+                        <div class='mat-button-focus-overlay'></div>
+                     </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class='slider-item'>
+               <div class='slider-item-image'><img src='assets/multimedia/images/home-slider-3.jpg' alt=''></div>
+               <div class='slider-item-content'>
+                  <div class='container'>
+                     <div class='slider-item-content-inner'>
+                        <h2>Contrary to popular rorem is simply</h2>
+                        <p>Contrary to popular belief, rorem is not simply random text. Contrary to popular belief, rorem is not simply random text.</p>
+                        <button class='mat-button mat-ripple-container'>
+                        <span class='mat-button-text'>DONET NOW</span>
+                        <div class='mat-button-focus-overlay'></div>
+                     </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class='slider-controls'>
+            <div class='slider-controls-dots'></div>
+         </div>
+      </div>
+      <div class='facts'>
+         <div class='fact-item left'>
+            <div class='fact-overlay'></div>
+            <div class='fact-item-content'>
+               <div class='fact-item-icon'>
+                  <svg xmlns='http://www.w3.org/2000/svg' width='1792' height='1792' viewBox='0 0 1792 1792'><path d='M1755 453q37 38 37 90.5t-37 90.5l-401 400 150 150-160 160q-163 163-389.5 186.5t-411.5-100.5l-362 362h-181v-181l362-362q-124-185-100.5-411.5t186.5-389.5l160-160 150 150 400-401q38-37 91-37t90 37 37 90.5-37 90.5l-400 401 234 234 401-400q38-37 91-37t90 37z'/></svg>
+               </div>
+               <div class='fact-item-details'>
+                  <div class='fact-item-count'>78,520</div>
+                  <div class='fact-item-info'>Volunteer with us</div>
+               </div>
+            </div>
+         </div>
+         <div class='fact-item left'>
+            <div class='fact-overlay'></div>
+            <div class='fact-item-content'>
+               <div class='fact-item-icon'>
+                  <svg xmlns='http://www.w3.org/2000/svg' width='1792' height='1792' viewBox='0 0 1792 1792'><path d='M1062 150q-317 121-556 362.5t-358 560.5q-20-89-20-176 0-208 102.5-384.5t278.5-279 384-102.5q82 0 169 19zm269 119q93 65 164 155-389 113-674.5 400.5t-396.5 676.5q-93-72-155-162 112-386 395-671t667-399zm-733 1334q115-356 379.5-622t619.5-384q40 92 54 195-292 120-516 345t-343 518q-103-14-194-52zm1066 58q-193-50-367-115-135 84-290 107 109-205 274-370.5t369-275.5q-21 152-101 284 65 175 115 370z'/></svg>
+               </div>
+               <div class='fact-item-details'>
+                  <div class='fact-item-count'>9,821</div>
+                  <div class='fact-item-info'>Donors trust us</div>
+               </div>
+            </div>
+         </div>
+         <div class='fact-item left'>
+            <div class='fact-overlay'></div>
+            <div class='fact-item-content'>
+               <div class='fact-item-icon'>
+                  <svg xmlns='http://www.w3.org/2000/svg' width='1792' height='1792' viewBox='0 0 1792 1792'><path d='M901 1319v127q-1 292-6 305-12 32-51 40-54 9-181.5-38t-162.5-89q-13-15-17-36-1-12 4-26 4-10 34-47t181-216q1 0 60-70 15-19 39.5-24.5t49.5 3.5q24 10 37.5 29t12.5 42zm-149-251q-3 55-52 70l-120 39q-275 88-292 88-35-2-54-36-12-25-17-75-8-76 1-166.5t30-124.5 56-32q13 0 202 77 71 29 115 47l84 34q23 9 35.5 30.5t11.5 48.5zm826 297q-7 54-91.5 161t-135.5 127q-37 14-63-7-14-10-184-287l-47-77q-14-21-11.5-46t19.5-46q35-43 83-26 1 1 119 40 203 66 242 79.5t47 20.5q28 22 22 61zm-672-632q5 102-54 122-58 17-114-71l-378-598q-8-35 19-62 41-43 207.5-89.5t224.5-31.5q40 10 49 45 3 18 22 305.5t24 379.5zm662 108q3 39-26 59-15 10-329 86-67 15-91 23l1-2q-23 6-46-4t-37-32q-30-47 0-87 1-1 75-102 125-171 150-204t34-39q28-19 65-2 48 23 123 133.5t81 167.5v3z'/></svg>
+               </div>
+               <div class='fact-item-details'>
+                  <div class='fact-item-count'>25,003</div>
+                  <div class='fact-item-info'>Causes are completed</div>
+               </div>
+            </div>
+         </div>
+         <div class='fact-item left'>
+            <div class='fact-overlay'></div>
+            <div class='fact-item-content'>
+               <div class='fact-item-icon'>
+                  <svg xmlns='http://www.w3.org/2000/svg' width='1792' height='1792' viewBox='0 0 1792 1792'><path d='M1280 1024h305q-5 6-10 10.5t-9 7.5l-3 4-623 600q-18 18-44 18t-44-18l-624-602q-5-2-21-20h369q22 0 39.5-13.5t22.5-34.5l70-281 190 667q6 20 23 33t39 13q21 0 38-13t23-33l146-485 56 112q18 35 57 35zm512-428q0 145-103 300h-369l-111-221q-8-17-25.5-27t-36.5-8q-45 5-56 46l-129 430-196-686q-6-20-23.5-33t-39.5-13-39 13.5-22 34.5l-116 464h-423q-103-155-103-300 0-220 127-344t351-124q62 0 126.5 21.5t120 58 95.5 68.5 76 68q36-36 76-68t95.5-68.5 120-58 126.5-21.5q224 0 351 124t127 344z'/></svg>
+               </div>
+               <div class='fact-item-details'>
+                  <div class='fact-item-count'>103,210</div>
+                  <div class='fact-item-info'>Peoples are helped</div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class='intro align-center'>
+         <div class='container'>
+            <h1 class='intro-title'>Welcome to <b>beCharity</b></h1>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock Latin professor at Hampden-Sydney College in Virginia, looked
+               up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
+         </div>
+      </div>
+      <div class='recent-cause'>
+         <div class='container'>
+            <h2 class='section-title'>Recent cause
+            <span class='section-title-icon'><i class='material-icons'>flag</i></span>
+         </h2>
+            <div class='cause-lists'>
+               <div class='cause-item'>
+                  <img class='cause-item-image' src='assets/multimedia/images/c1.jpg' alt=''>
+                  <div class='cause-item-summary'>
+                     <div class='cause-item-content left'>
+                        <h3 class='cause-item-title'>
+                        <a>Help Children to make a better life</a>
+                     </h3>
+                        <div class='cause-item-location'>
+                           <span class='icon'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='1792' height='1792' viewBox='0 0 1792 1792'><path d='M896 128q209 0 385.5 103t279.5 279.5 103 385.5-103 385.5-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103zm274 521q-2 1-9.5 9.5t-13.5 9.5q2 0 4.5-5t5-11 3.5-7q6-7 22-15 14-6 52-12 34-8 51 11-2-2 9.5-13t14.5-12q3-2 15-4.5t15-7.5l2-22q-12 1-17.5-7t-6.5-21q0 2-6 8 0-7-4.5-8t-11.5 1-9 1q-10-3-15-7.5t-8-16.5-4-15q-2-5-9.5-11t-9.5-10q-1-2-2.5-5.5t-3-6.5-4-5.5-5.5-2.5-7 5-7.5 10-4.5 5q-3-2-6-1.5t-4.5 1-4.5 3-5 3.5q-3 2-8.5 3t-8.5 2q15-5-1-11-10-4-16-3 9-4 7.5-12t-8.5-14h5q-1-4-8.5-8.5t-17.5-8.5-13-6q-8-5-34-9.5t-33-.5q-5 6-4.5 10.5t4 14 3.5 12.5q1 6-5.5 13t-6.5 12q0 7 14 15.5t10 21.5q-3 8-16 16t-16 12q-5 8-1.5 18.5t10.5 16.5q2 2 1.5 4t-3.5 4.5-5.5 4-6.5 3.5l-3 2q-11 5-20.5-6t-13.5-26q-7-25-16-30-23-8-29 1-5-13-41-26-25-9-58-4 6-1 0-15-7-15-19-12 3-6 4-17.5t1-13.5q3-13 12-23 1-1 7-8.5t9.5-13.5.5-6q35 4 50-11 5-5 11.5-17t10.5-17q9-6 14-5.5t14.5 5.5 14.5 5q14 1 15.5-11t-7.5-20q12 1 3-17-4-7-8-9-12-4-27 5-8 4 2 8-1-1-9.5 10.5t-16.5 17.5-16-5q-1-1-5.5-13.5t-9.5-13.5q-8 0-16 15 3-8-11-15t-24-8q19-12-8-27-7-4-20.5-5t-19.5 4q-5 7-5.5 11.5t5 8 10.5 5.5 11.5 4 8.5 3q14 10 8 14-2 1-8.5 3.5t-11.5 4.5-6 4q-3 4 0 14t-2 14q-5-5-9-17.5t-7-16.5q7 9-25 6l-10-1q-4 0-16 2t-20.5 1-13.5-8q-4-8 0-20 1-4 4-2-4-3-11-9.5t-10-8.5q-46 15-94 41 6 1 12-1 5-2 13-6.5t10-5.5q34-14 42-7l5-5q14 16 20 25-7-4-30-1-20 6-22 12 7 12 5 18-4-3-11.5-10t-14.5-11-15-5q-16 0-22 1-146 80-235 222 7 7 12 8 4 1 5 9t2.5 11 11.5-3q9 8 3 19 1-1 44 27 19 17 21 21 3 11-10 18-1-2-9-9t-9-4q-3 5 .5 18.5t10.5 12.5q-7 0-9.5 16t-2.5 35.5-1 23.5l2 1q-3 12 5.5 34.5t21.5 19.5q-13 3 20 43 6 8 8 9 3 2 12 7.5t15 10 10 10.5q4 5 10 22.5t14 23.5q-2 6 9.5 20t10.5 23q-1 0-2.5 1t-2.5 1q3 7 15.5 14t15.5 13q1 3 2 10t3 11 8 2q2-20-24-62-15-25-17-29-3-5-5.5-15.5t-4.5-14.5q2 0 6 1.5t8.5 3.5 7.5 4 2 3q-3 7 2 17.5t12 18.5 17 19 12 13q6 6 14 19.5t0 13.5q9 0 20 10.5t17 19.5q5 8 8 26t5 24q2 7 8.5 13.5t12.5 9.5l16 8 13 7q5 2 18.5 10.5t21.5 11.5q10 4 16 4t14.5-2.5 13.5-3.5q15-2 29 15t21 21q36 19 55 11-2 1 .5 7.5t8 15.5 9 14.5 5.5 8.5q5 6 18 15t18 15q6-4 7-9-3 8 7 20t18 10q14-3 14-32-31 15-49-18 0-1-2.5-5.5t-4-8.5-2.5-8.5 0-7.5 5-3q9 0 10-3.5t-2-12.5-4-13q-1-8-11-20t-12-15q-5 9-16 8t-16-9q0 1-1.5 5.5t-1.5 6.5q-13 0-15-1 1-3 2.5-17.5t3.5-22.5q1-4 5.5-12t7.5-14.5 4-12.5-4.5-9.5-17.5-2.5q-19 1-26 20-1 3-3 10.5t-5 11.5-9 7q-7 3-24 2t-24-5q-13-8-22.5-29t-9.5-37q0-10 2.5-26.5t3-25-5.5-24.5q3-2 9-9.5t10-10.5q2-1 4.5-1.5t4.5 0 4-1.5 3-6q-1-1-4-3-3-3-4-3 7 3 28.5-1.5t27.5 1.5q15 11 22-2 0-1-2.5-9.5t-.5-13.5q5 27 29 9 3 3 15.5 5t17.5 5q3 2 7 5.5t5.5 4.5 5-.5 8.5-6.5q10 14 12 24 11 40 19 44 7 3 11 2t4.5-9.5 0-14-1.5-12.5l-1-8v-18l-1-8q-15-3-18.5-12t1.5-18.5 15-18.5q1-1 8-3.5t15.5-6.5 12.5-8q21-19 15-35 7 0 11-9-1 0-5-3t-7.5-5-4.5-2q9-5 2-16 5-3 7.5-11t7.5-10q9 12 21 2 8-8 1-16 5-7 20.5-10.5t18.5-9.5q7 2 8-2t1-12 3-12q4-5 15-9t13-5l17-11q3-4 0-4 18 2 31-11 10-11-6-20 3-6-3-9.5t-15-5.5q3-1 11.5-.5t10.5-1.5q15-10-7-16-17-5-43 12zm-163 877q206-36 351-189-3-3-12.5-4.5t-12.5-3.5q-18-7-24-8 1-7-2.5-13t-8-9-12.5-8-11-7q-2-2-7-6t-7-5.5-7.5-4.5-8.5-2-10 1l-3 1q-3 1-5.5 2.5t-5.5 3-4 3 0 2.5q-21-17-36-22-5-1-11-5.5t-10.5-7-10-1.5-11.5 7q-5 5-6 15t-2 13q-7-5 0-17.5t2-18.5q-3-6-10.5-4.5t-12 4.5-11.5 8.5-9 6.5-8.5 5.5-8.5 7.5q-3 4-6 12t-5 11q-2-4-11.5-6.5t-9.5-5.5q2 10 4 35t5 38q7 31-12 48-27 25-29 40-4 22 12 26 0 7-8 20.5t-7 21.5q0 6 2 16z'/></svg>
+                     </span>
+                           <a>Nagasaki</a>,
+                           <a>Japan</a>
+                        </div>
+                        <div class='cause-item-tags'>
+                           <span class='icon'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='2048' height='1792' viewBox='0 0 2048 1792'><path d='M512 448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm1067 576q0 53-37 90l-491 492q-39 37-91 37-53 0-90-37l-715-716q-38-37-64.5-101t-26.5-117v-416q0-52 38-90t90-38h416q53 0 117 26.5t102 64.5l715 714q37 39 37 91zm384 0q0 53-37 90l-491 492q-39 37-91 37-36 0-59-14t-53-45l470-470q37-37 37-90 0-52-37-91l-715-714q-38-38-102-64.5t-117-26.5h224q53 0 117 26.5t102 64.5l715 714q37 39 37 91z'/></svg>
+                     </span>
+                           <a>Children</a>,
+                           <a>Sports</a>,
+                           <a>Education</a>
+                        </div>
+                        <button class='mat-button mat-ripple-container'>
+                        <span class='mat-button-text'>DONATE</span>
+                        <div class='mat-button-focus-overlay'></div>
+                     </button>
+                     </div>
+                     <div class='cause-item-funding'>
+                        <div class='fund-line'>
+                           <div class='fund-line-fill'></div>
+                        </div>
+                        <div class='fund-percent'>56%</div>
+                     </div>
+                  </div>
+               </div>
+               <div class='cause-item'>
+                  <img class='cause-item-image' src='assets/multimedia/images/c2.jpg' alt=''>
+                  <div class='cause-item-summary'>
+                     <div class='cause-item-content left'>
+                        <h3 class='cause-item-title'>
+                     <a>Children Needs More Foods and Water</a>
+                  </h3>
+                        <div class='cause-item-location'>
+                           <span class='icon'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='1792' height='1792' viewBox='0 0 1792 1792'><path d='M896 128q209 0 385.5 103t279.5 279.5 103 385.5-103 385.5-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103zm274 521q-2 1-9.5 9.5t-13.5 9.5q2 0 4.5-5t5-11 3.5-7q6-7 22-15 14-6 52-12 34-8 51 11-2-2 9.5-13t14.5-12q3-2 15-4.5t15-7.5l2-22q-12 1-17.5-7t-6.5-21q0 2-6 8 0-7-4.5-8t-11.5 1-9 1q-10-3-15-7.5t-8-16.5-4-15q-2-5-9.5-11t-9.5-10q-1-2-2.5-5.5t-3-6.5-4-5.5-5.5-2.5-7 5-7.5 10-4.5 5q-3-2-6-1.5t-4.5 1-4.5 3-5 3.5q-3 2-8.5 3t-8.5 2q15-5-1-11-10-4-16-3 9-4 7.5-12t-8.5-14h5q-1-4-8.5-8.5t-17.5-8.5-13-6q-8-5-34-9.5t-33-.5q-5 6-4.5 10.5t4 14 3.5 12.5q1 6-5.5 13t-6.5 12q0 7 14 15.5t10 21.5q-3 8-16 16t-16 12q-5 8-1.5 18.5t10.5 16.5q2 2 1.5 4t-3.5 4.5-5.5 4-6.5 3.5l-3 2q-11 5-20.5-6t-13.5-26q-7-25-16-30-23-8-29 1-5-13-41-26-25-9-58-4 6-1 0-15-7-15-19-12 3-6 4-17.5t1-13.5q3-13 12-23 1-1 7-8.5t9.5-13.5.5-6q35 4 50-11 5-5 11.5-17t10.5-17q9-6 14-5.5t14.5 5.5 14.5 5q14 1 15.5-11t-7.5-20q12 1 3-17-4-7-8-9-12-4-27 5-8 4 2 8-1-1-9.5 10.5t-16.5 17.5-16-5q-1-1-5.5-13.5t-9.5-13.5q-8 0-16 15 3-8-11-15t-24-8q19-12-8-27-7-4-20.5-5t-19.5 4q-5 7-5.5 11.5t5 8 10.5 5.5 11.5 4 8.5 3q14 10 8 14-2 1-8.5 3.5t-11.5 4.5-6 4q-3 4 0 14t-2 14q-5-5-9-17.5t-7-16.5q7 9-25 6l-10-1q-4 0-16 2t-20.5 1-13.5-8q-4-8 0-20 1-4 4-2-4-3-11-9.5t-10-8.5q-46 15-94 41 6 1 12-1 5-2 13-6.5t10-5.5q34-14 42-7l5-5q14 16 20 25-7-4-30-1-20 6-22 12 7 12 5 18-4-3-11.5-10t-14.5-11-15-5q-16 0-22 1-146 80-235 222 7 7 12 8 4 1 5 9t2.5 11 11.5-3q9 8 3 19 1-1 44 27 19 17 21 21 3 11-10 18-1-2-9-9t-9-4q-3 5 .5 18.5t10.5 12.5q-7 0-9.5 16t-2.5 35.5-1 23.5l2 1q-3 12 5.5 34.5t21.5 19.5q-13 3 20 43 6 8 8 9 3 2 12 7.5t15 10 10 10.5q4 5 10 22.5t14 23.5q-2 6 9.5 20t10.5 23q-1 0-2.5 1t-2.5 1q3 7 15.5 14t15.5 13q1 3 2 10t3 11 8 2q2-20-24-62-15-25-17-29-3-5-5.5-15.5t-4.5-14.5q2 0 6 1.5t8.5 3.5 7.5 4 2 3q-3 7 2 17.5t12 18.5 17 19 12 13q6 6 14 19.5t0 13.5q9 0 20 10.5t17 19.5q5 8 8 26t5 24q2 7 8.5 13.5t12.5 9.5l16 8 13 7q5 2 18.5 10.5t21.5 11.5q10 4 16 4t14.5-2.5 13.5-3.5q15-2 29 15t21 21q36 19 55 11-2 1 .5 7.5t8 15.5 9 14.5 5.5 8.5q5 6 18 15t18 15q6-4 7-9-3 8 7 20t18 10q14-3 14-32-31 15-49-18 0-1-2.5-5.5t-4-8.5-2.5-8.5 0-7.5 5-3q9 0 10-3.5t-2-12.5-4-13q-1-8-11-20t-12-15q-5 9-16 8t-16-9q0 1-1.5 5.5t-1.5 6.5q-13 0-15-1 1-3 2.5-17.5t3.5-22.5q1-4 5.5-12t7.5-14.5 4-12.5-4.5-9.5-17.5-2.5q-19 1-26 20-1 3-3 10.5t-5 11.5-9 7q-7 3-24 2t-24-5q-13-8-22.5-29t-9.5-37q0-10 2.5-26.5t3-25-5.5-24.5q3-2 9-9.5t10-10.5q2-1 4.5-1.5t4.5 0 4-1.5 3-6q-1-1-4-3-3-3-4-3 7 3 28.5-1.5t27.5 1.5q15 11 22-2 0-1-2.5-9.5t-.5-13.5q5 27 29 9 3 3 15.5 5t17.5 5q3 2 7 5.5t5.5 4.5 5-.5 8.5-6.5q10 14 12 24 11 40 19 44 7 3 11 2t4.5-9.5 0-14-1.5-12.5l-1-8v-18l-1-8q-15-3-18.5-12t1.5-18.5 15-18.5q1-1 8-3.5t15.5-6.5 12.5-8q21-19 15-35 7 0 11-9-1 0-5-3t-7.5-5-4.5-2q9-5 2-16 5-3 7.5-11t7.5-10q9 12 21 2 8-8 1-16 5-7 20.5-10.5t18.5-9.5q7 2 8-2t1-12 3-12q4-5 15-9t13-5l17-11q3-4 0-4 18 2 31-11 10-11-6-20 3-6-3-9.5t-15-5.5q3-1 11.5-.5t10.5-1.5q15-10-7-16-17-5-43 12zm-163 877q206-36 351-189-3-3-12.5-4.5t-12.5-3.5q-18-7-24-8 1-7-2.5-13t-8-9-12.5-8-11-7q-2-2-7-6t-7-5.5-7.5-4.5-8.5-2-10 1l-3 1q-3 1-5.5 2.5t-5.5 3-4 3 0 2.5q-21-17-36-22-5-1-11-5.5t-10.5-7-10-1.5-11.5 7q-5 5-6 15t-2 13q-7-5 0-17.5t2-18.5q-3-6-10.5-4.5t-12 4.5-11.5 8.5-9 6.5-8.5 5.5-8.5 7.5q-3 4-6 12t-5 11q-2-4-11.5-6.5t-9.5-5.5q2 10 4 35t5 38q7 31-12 48-27 25-29 40-4 22 12 26 0 7-8 20.5t-7 21.5q0 6 2 16z'/></svg>
+                     </span>
+                           <a>Nagasaki</a>,
+                           <a>Japan</a>
+                        </div>
+                        <div class='cause-item-tags'>
+                           <span class='icon'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='2048' height='1792' viewBox='0 0 2048 1792'><path d='M512 448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm1067 576q0 53-37 90l-491 492q-39 37-91 37-53 0-90-37l-715-716q-38-37-64.5-101t-26.5-117v-416q0-52 38-90t90-38h416q53 0 117 26.5t102 64.5l715 714q37 39 37 91zm384 0q0 53-37 90l-491 492q-39 37-91 37-36 0-59-14t-53-45l470-470q37-37 37-90 0-52-37-91l-715-714q-38-38-102-64.5t-117-26.5h224q53 0 117 26.5t102 64.5l715 714q37 39 37 91z'/></svg>
+                     </span>
+                           <a>Children</a>,
+                           <a>Sports</a>,
+                           <a>Education</a>
+                        </div>
+                        <button class='mat-button mat-ripple-container'>
+                        <span class='mat-button-text'>DONATE</span>
+                        <div class='mat-button-focus-overlay'></div>
+                     </button>
+                     </div>
+                     <div class='cause-item-funding'>
+                        <div class='fund-line'>
+                           <div class='fund-line-fill'></div>
+                        </div>
+                        <div class='fund-percent'>56%</div>
+                     </div>
+                  </div>
+               </div>
+               <div class='cause-item'>
+                  <img class='cause-item-image' src='assets/multimedia/images/c3.jpg' alt=''>
+                  <div class='cause-item-summary'>
+                     <div class='cause-item-content left'>
+                        <h3 class='cause-item-title'>
+                     <a> Nation to engage in the fight against hunger</a>
+                  </h3>
+                        <div class='cause-item-location'>
+                           <span class='icon'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='1792' height='1792' viewBox='0 0 1792 1792'><path d='M896 128q209 0 385.5 103t279.5 279.5 103 385.5-103 385.5-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103zm274 521q-2 1-9.5 9.5t-13.5 9.5q2 0 4.5-5t5-11 3.5-7q6-7 22-15 14-6 52-12 34-8 51 11-2-2 9.5-13t14.5-12q3-2 15-4.5t15-7.5l2-22q-12 1-17.5-7t-6.5-21q0 2-6 8 0-7-4.5-8t-11.5 1-9 1q-10-3-15-7.5t-8-16.5-4-15q-2-5-9.5-11t-9.5-10q-1-2-2.5-5.5t-3-6.5-4-5.5-5.5-2.5-7 5-7.5 10-4.5 5q-3-2-6-1.5t-4.5 1-4.5 3-5 3.5q-3 2-8.5 3t-8.5 2q15-5-1-11-10-4-16-3 9-4 7.5-12t-8.5-14h5q-1-4-8.5-8.5t-17.5-8.5-13-6q-8-5-34-9.5t-33-.5q-5 6-4.5 10.5t4 14 3.5 12.5q1 6-5.5 13t-6.5 12q0 7 14 15.5t10 21.5q-3 8-16 16t-16 12q-5 8-1.5 18.5t10.5 16.5q2 2 1.5 4t-3.5 4.5-5.5 4-6.5 3.5l-3 2q-11 5-20.5-6t-13.5-26q-7-25-16-30-23-8-29 1-5-13-41-26-25-9-58-4 6-1 0-15-7-15-19-12 3-6 4-17.5t1-13.5q3-13 12-23 1-1 7-8.5t9.5-13.5.5-6q35 4 50-11 5-5 11.5-17t10.5-17q9-6 14-5.5t14.5 5.5 14.5 5q14 1 15.5-11t-7.5-20q12 1 3-17-4-7-8-9-12-4-27 5-8 4 2 8-1-1-9.5 10.5t-16.5 17.5-16-5q-1-1-5.5-13.5t-9.5-13.5q-8 0-16 15 3-8-11-15t-24-8q19-12-8-27-7-4-20.5-5t-19.5 4q-5 7-5.5 11.5t5 8 10.5 5.5 11.5 4 8.5 3q14 10 8 14-2 1-8.5 3.5t-11.5 4.5-6 4q-3 4 0 14t-2 14q-5-5-9-17.5t-7-16.5q7 9-25 6l-10-1q-4 0-16 2t-20.5 1-13.5-8q-4-8 0-20 1-4 4-2-4-3-11-9.5t-10-8.5q-46 15-94 41 6 1 12-1 5-2 13-6.5t10-5.5q34-14 42-7l5-5q14 16 20 25-7-4-30-1-20 6-22 12 7 12 5 18-4-3-11.5-10t-14.5-11-15-5q-16 0-22 1-146 80-235 222 7 7 12 8 4 1 5 9t2.5 11 11.5-3q9 8 3 19 1-1 44 27 19 17 21 21 3 11-10 18-1-2-9-9t-9-4q-3 5 .5 18.5t10.5 12.5q-7 0-9.5 16t-2.5 35.5-1 23.5l2 1q-3 12 5.5 34.5t21.5 19.5q-13 3 20 43 6 8 8 9 3 2 12 7.5t15 10 10 10.5q4 5 10 22.5t14 23.5q-2 6 9.5 20t10.5 23q-1 0-2.5 1t-2.5 1q3 7 15.5 14t15.5 13q1 3 2 10t3 11 8 2q2-20-24-62-15-25-17-29-3-5-5.5-15.5t-4.5-14.5q2 0 6 1.5t8.5 3.5 7.5 4 2 3q-3 7 2 17.5t12 18.5 17 19 12 13q6 6 14 19.5t0 13.5q9 0 20 10.5t17 19.5q5 8 8 26t5 24q2 7 8.5 13.5t12.5 9.5l16 8 13 7q5 2 18.5 10.5t21.5 11.5q10 4 16 4t14.5-2.5 13.5-3.5q15-2 29 15t21 21q36 19 55 11-2 1 .5 7.5t8 15.5 9 14.5 5.5 8.5q5 6 18 15t18 15q6-4 7-9-3 8 7 20t18 10q14-3 14-32-31 15-49-18 0-1-2.5-5.5t-4-8.5-2.5-8.5 0-7.5 5-3q9 0 10-3.5t-2-12.5-4-13q-1-8-11-20t-12-15q-5 9-16 8t-16-9q0 1-1.5 5.5t-1.5 6.5q-13 0-15-1 1-3 2.5-17.5t3.5-22.5q1-4 5.5-12t7.5-14.5 4-12.5-4.5-9.5-17.5-2.5q-19 1-26 20-1 3-3 10.5t-5 11.5-9 7q-7 3-24 2t-24-5q-13-8-22.5-29t-9.5-37q0-10 2.5-26.5t3-25-5.5-24.5q3-2 9-9.5t10-10.5q2-1 4.5-1.5t4.5 0 4-1.5 3-6q-1-1-4-3-3-3-4-3 7 3 28.5-1.5t27.5 1.5q15 11 22-2 0-1-2.5-9.5t-.5-13.5q5 27 29 9 3 3 15.5 5t17.5 5q3 2 7 5.5t5.5 4.5 5-.5 8.5-6.5q10 14 12 24 11 40 19 44 7 3 11 2t4.5-9.5 0-14-1.5-12.5l-1-8v-18l-1-8q-15-3-18.5-12t1.5-18.5 15-18.5q1-1 8-3.5t15.5-6.5 12.5-8q21-19 15-35 7 0 11-9-1 0-5-3t-7.5-5-4.5-2q9-5 2-16 5-3 7.5-11t7.5-10q9 12 21 2 8-8 1-16 5-7 20.5-10.5t18.5-9.5q7 2 8-2t1-12 3-12q4-5 15-9t13-5l17-11q3-4 0-4 18 2 31-11 10-11-6-20 3-6-3-9.5t-15-5.5q3-1 11.5-.5t10.5-1.5q15-10-7-16-17-5-43 12zm-163 877q206-36 351-189-3-3-12.5-4.5t-12.5-3.5q-18-7-24-8 1-7-2.5-13t-8-9-12.5-8-11-7q-2-2-7-6t-7-5.5-7.5-4.5-8.5-2-10 1l-3 1q-3 1-5.5 2.5t-5.5 3-4 3 0 2.5q-21-17-36-22-5-1-11-5.5t-10.5-7-10-1.5-11.5 7q-5 5-6 15t-2 13q-7-5 0-17.5t2-18.5q-3-6-10.5-4.5t-12 4.5-11.5 8.5-9 6.5-8.5 5.5-8.5 7.5q-3 4-6 12t-5 11q-2-4-11.5-6.5t-9.5-5.5q2 10 4 35t5 38q7 31-12 48-27 25-29 40-4 22 12 26 0 7-8 20.5t-7 21.5q0 6 2 16z'/></svg>
+                     </span>
+                           <a>Nagasaki</a>,
+                           <a>Japan</a>
+                        </div>
+                        <div class='cause-item-tags'>
+                           <span class='icon'>
+                        <svg xmlns='http://www.w3.org/2000/svg' width='2048' height='1792' viewBox='0 0 2048 1792'><path d='M512 448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm1067 576q0 53-37 90l-491 492q-39 37-91 37-53 0-90-37l-715-716q-38-37-64.5-101t-26.5-117v-416q0-52 38-90t90-38h416q53 0 117 26.5t102 64.5l715 714q37 39 37 91zm384 0q0 53-37 90l-491 492q-39 37-91 37-36 0-59-14t-53-45l470-470q37-37 37-90 0-52-37-91l-715-714q-38-38-102-64.5t-117-26.5h224q53 0 117 26.5t102 64.5l715 714q37 39 37 91z'/></svg>
+                     </span>
+                           <a>Children</a>,
+                           <a>Sports</a>,
+                           <a>Education</a>
+                        </div>
+                        <button class='mat-button mat-ripple-container'>
+                        <span class='mat-button-text'>DONATE</span>
+                        <div class='mat-button-focus-overlay'></div>
+                     </button>
+                     </div>
+                     <div class='cause-item-funding'>
+                        <div class='fund-line'>
+                           <div class='fund-line-fill'></div>
+                        </div>
+                        <div class='fund-percent'>56%</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class='upcoming-events'>
+         <div class='container'>
+            <h2 class='section-title'>Upcoming Events
+            <span class='section-title-icon'><i class='material-icons'>star_rate</i></span>
+         </h2>
+         </div>
+         <div id='event-slider' class='event-slider'>
+            <div class='slider-content'>
+               <div class='slider-item'>
+                  <div class='slider-item-image'><img src='assets/multimedia/images/event-1.jpg' alt=''></div>
+                  <div class='slider-item-content'>
+                     <div class='slider-item-content-inner'>
+                        <h3>Supporting childhood nutrition programs</h3>
+                        <p>Diam graeco . Sed et mutat splendide, cum te labore virtute urbanitas. Duo at aeque exerci philosophia.Diam graeco sententiae cu vel, ad esse purto ubique vim. Mea in semper patrioque interesset. Sed et mutat splendide, cum te
+                           labore virtute urbanitas. Duo at aeque exerci philosophia.</p>
+                        <div class='slide-meta'>
+                           <span><i class='material-icons'>date_range</i>21 November, 2016</span>
+                           <span><i class='material-icons'>access_time</i>10 : 30am</span>
+                        </div>
+                        <div class='slide-meta'>
+                           <span><i class='material-icons'>flag</i>Convetion Hall, Las vegus, USA</span>
+                        </div>
+                        <div class='speaker'>
+                           <div class='speaker-text'>
+                              <i class='material-icons'>volume_up</i>Speakers
+                           </div>
+                           <div class='speaker-thumb'>
+                              <img src='assets/multimedia/images/speaker4.jpg' alt='speaker'>
+                              <img src='assets/multimedia/images/speaker5.jpg' alt='speaker'>
+                              <img src='assets/multimedia/images/speaker6.jpg' alt='speaker'>
+                           </div>
+                        </div>
+                        <div class='join-list'>
+                           <button class='mat-button mat-ripple-white'>
+                              <span class='mat-button-text'>JOIN NOW</span>
+                              <div class='mat-button-focus-overlay'></div>
+                           </button>
+                           <div class='social-icon'>
+                              <a><img src='assets/multimedia/icons/facebook.svg'></a>
+                              <a><img src='assets/multimedia/icons/twitter.svg'></a>
+                              <a><img src='assets/multimedia/icons/google.svg'></a>
+                              <a><img src='assets/multimedia/icons/share.svg'></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class='slider-item'>
+                  <div class='slider-item-image'><img src='assets/multimedia/images/event-2.jpg' alt=''></div>
+                  <div class='slider-item-content'>
+                     <div class='slider-item-content-inner'>
+                        <h3>Nusquam adipisci hendrerit adcum dicea.</h3>
+                        <p>Diam graeco . Sed et mutat splendide, cum te labore virtute urbanitas. Duo at aeque exerci philosophia.Diam graeco sententiae cu vel, ad esse purto ubique vim. Mea in semper patrioque interesset. Sed et mutat splendide, cum te
+                           labore virtute urbanitas. Duo at aeque exerci philosophia.</p>
+                        <div class='slide-meta'>
+                           <span><i class='material-icons'>date_range</i>21 November, 2016</span>
+                           <span><i class='material-icons'>access_time</i>10 : 30am</span>
+                        </div>
+                        <div class='slide-meta'>
+                           <span><i class='material-icons'>flag</i>Convetion Hall, Las vegus, USA</span>
+                        </div>
+                        <div class='speaker'>
+                           <div class='speaker-text'>
+                              <i class='material-icons'>volume_up</i>Speakers
+                           </div>
+                           <div class='speaker-thumb'>
+                              <img src='assets/multimedia/images/speaker1.jpg' alt='speaker'>
+                              <img src='assets/multimedia/images/speaker2.jpg' alt='speaker'>
+                              <img src='assets/multimedia/images/speaker3.jpg' alt='speaker'>
+                           </div>
+                        </div>
+                        <div class='join-list'>
+                           <button class='mat-button mat-ripple-white'>
+                              <span class='mat-button-text'>JOIN NOW</span>
+                              <div class='mat-button-focus-overlay'></div>
+                           </button>
+                           <div class='social-icon'>
+                              <a><img src='assets/multimedia/icons/facebook.svg'></a>
+                              <a><img src='assets/multimedia/icons/twitter.svg'></a>
+                              <a><img src='assets/multimedia/icons/google.svg'></a>
+                              <a><img src='assets/multimedia/icons/share.svg'></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class='slider-controls'>
+               <div class='slider-controls-nav center'>
+                  <div class='left'><i class='material-icons'>keyboard_arrow_left</i></div>
+                  <div class='right'><i class='material-icons'>keyboard_arrow_right</i></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class='latest-blog'>
+         <div class='container'>
+            <h2 class='section-title'>LATEST BLOGS
+            <span class='section-title-icon'><i class='material-icons'>insert_drive_file</i></span>
+         </h2>
+            <div class='latest-lists'>
+               <div class='latest-item'>
+                  <img class='latest-item-image' src='assets/multimedia/images/blog1.jpg' alt=''>
+                  <div class='latest-item-content'>
+                     <div class='post-meta'>
+                        <span class='meta-left'>
+                        <span class='icon'><svg xmlns='http://www.w3.org/2000/svg' width='2048' height='1792' viewBox='0 0 2048 1792'><path d='M512 448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm1067 576q0 53-37 90l-491 492q-39 37-91 37-53 0-90-37l-715-716q-38-37-64.5-101t-26.5-117v-416q0-52 38-90t90-38h416q53 0 117 26.5t102 64.5l715 714q37 39 37 91zm384 0q0 53-37 90l-491 492q-39 37-91 37-36 0-59-14t-53-45l470-470q37-37 37-90 0-52-37-91l-715-714q-38-38-102-64.5t-117-26.5h224q53 0 117 26.5t102 64.5l715 714q37 39 37 91z'></path></svg></span>
+                        <a>Children</a>, <a>Sports</a>, <a>Education</a>
+                        </span>
+                        <span class='right'>
+                        <span class='icon'><svg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M704 384q-153 0-286 52t-211.5 141-78.5 191q0 82 53 158t149 132l97 56-35 84q34-20 62-39l44-31 53 10q78 14 153 14 153 0 286-52t211.5-141 78.5-191-78.5-191-211.5-141-286-52zm0-128q191 0 353.5 68.5t256.5 186.5 94 257-94 257-256.5 186.5-353.5 68.5q-86 0-176-16-124 88-278 128-36 9-86 16h-3q-11 0-20.5-8t-11.5-21q-1-3-1-6.5t.5-6.5 2-6l2.5-5 3.5-5.5 4-5 4.5-5 4-4.5q5-6 23-25t26-29.5 22.5-29 25-38.5 20.5-44q-124-72-195-177t-71-224q0-139 94-257t256.5-186.5 353.5-68.5zm822 1169q10 24 20.5 44t25 38.5 22.5 29 26 29.5 23 25q1 1 4 4.5t4.5 5 4 5 3.5 5.5l2.5 5 2 6 .5 6.5-1 6.5q-3 14-13 22t-22 7q-50-7-86-16-154-40-278-128-90 16-176 16-271 0-472-132 58 4 88 4 161 0 309-45t264-129q125-92 192-212t67-254q0-77-23-152 129 71 204 178t75 230q0 120-71 224.5t-195 176.5z'/></svg></span>                        16
+                        </span>
+                     </div>
+                     <h3><a>Get doctor idea festival of the 2017</a></h3>
+                     <p>
+                        <span class='icon'><svg width='2048' height='1792' viewBox='0 0 2048 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1943 952q0 31-31 66l-336 396q-43 51-120.5 86.5t-143.5 35.5h-1088q-34 0-60.5-13t-26.5-43q0-31 31-66l336-396q43-51 120.5-86.5t143.5-35.5h1088q34 0 60.5 13t26.5 43zm-343-344v160h-832q-94 0-197 47.5t-164 119.5l-337 396-5 6q0-4-.5-12.5t-.5-12.5v-960q0-92 66-158t158-66h320q92 0 158 66t66 158v32h544q92 0 158 66t66 158z'/></svg></span>
+                        <a>Sports</a>, <a>education</a>, <a>Freedom</a>
+                     </p>
+
+                  </div>
+                  <div class='latest-item-author'>
+                     <img src='assets/multimedia/images/speaker2.jpg' alt=''>
+                     <div>Johan Doe</div>
+                  </div>
+               </div>
+               <div class='latest-item'>
+                  <img class='latest-item-image' src='assets/multimedia/images/blog2.jpg' alt=''>
+                  <div class='latest-item-content'>
+                     <div class='post-meta'>
+                        <span class='meta-left'>
+                        <span class='icon'><svg xmlns='http://www.w3.org/2000/svg' width='2048' height='1792' viewBox='0 0 2048 1792'><path d='M512 448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm1067 576q0 53-37 90l-491 492q-39 37-91 37-53 0-90-37l-715-716q-38-37-64.5-101t-26.5-117v-416q0-52 38-90t90-38h416q53 0 117 26.5t102 64.5l715 714q37 39 37 91zm384 0q0 53-37 90l-491 492q-39 37-91 37-36 0-59-14t-53-45l470-470q37-37 37-90 0-52-37-91l-715-714q-38-38-102-64.5t-117-26.5h224q53 0 117 26.5t102 64.5l715 714q37 39 37 91z'></path></svg></span>
+                        <a>Children</a>, <a>Sports</a>, <a>Education</a>
+                        </span>
+                        <span class='right'>
+                        <span class='icon'><svg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M704 384q-153 0-286 52t-211.5 141-78.5 191q0 82 53 158t149 132l97 56-35 84q34-20 62-39l44-31 53 10q78 14 153 14 153 0 286-52t211.5-141 78.5-191-78.5-191-211.5-141-286-52zm0-128q191 0 353.5 68.5t256.5 186.5 94 257-94 257-256.5 186.5-353.5 68.5q-86 0-176-16-124 88-278 128-36 9-86 16h-3q-11 0-20.5-8t-11.5-21q-1-3-1-6.5t.5-6.5 2-6l2.5-5 3.5-5.5 4-5 4.5-5 4-4.5q5-6 23-25t26-29.5 22.5-29 25-38.5 20.5-44q-124-72-195-177t-71-224q0-139 94-257t256.5-186.5 353.5-68.5zm822 1169q10 24 20.5 44t25 38.5 22.5 29 26 29.5 23 25q1 1 4 4.5t4.5 5 4 5 3.5 5.5l2.5 5 2 6 .5 6.5-1 6.5q-3 14-13 22t-22 7q-50-7-86-16-154-40-278-128-90 16-176 16-271 0-472-132 58 4 88 4 161 0 309-45t264-129q125-92 192-212t67-254q0-77-23-152 129 71 204 178t75 230q0 120-71 224.5t-195 176.5z'/></svg></span>                        16
+                        </span>
+                     </div>
+                     <h3><a>Get doctor idea festival of the 2017</a></h3>
+                     <p>
+                        <span class='icon'><svg width='2048' height='1792' viewBox='0 0 2048 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1943 952q0 31-31 66l-336 396q-43 51-120.5 86.5t-143.5 35.5h-1088q-34 0-60.5-13t-26.5-43q0-31 31-66l336-396q43-51 120.5-86.5t143.5-35.5h1088q34 0 60.5 13t26.5 43zm-343-344v160h-832q-94 0-197 47.5t-164 119.5l-337 396-5 6q0-4-.5-12.5t-.5-12.5v-960q0-92 66-158t158-66h320q92 0 158 66t66 158v32h544q92 0 158 66t66 158z'/></svg></span>
+                        <a>Sports</a>, <a>education</a>, <a>Freedom</a>
+                     </p>
+
+                  </div>
+                  <div class='latest-item-author'>
+                     <img src='assets/multimedia/images/speaker4.jpg' alt=''>
+                     <div>Adam Milne</div>
+                  </div>
+               </div>
+               <div class='latest-item'>
+                  <img class='latest-item-image' src='assets/multimedia/images/blog3.jpg' alt=''>
+                  <div class='latest-item-content'>
+                     <div class='post-meta'>
+                        <span class='meta-left'>
+                        <span class='icon'><svg xmlns='http://www.w3.org/2000/svg' width='2048' height='1792' viewBox='0 0 2048 1792'><path d='M512 448q0-53-37.5-90.5t-90.5-37.5-90.5 37.5-37.5 90.5 37.5 90.5 90.5 37.5 90.5-37.5 37.5-90.5zm1067 576q0 53-37 90l-491 492q-39 37-91 37-53 0-90-37l-715-716q-38-37-64.5-101t-26.5-117v-416q0-52 38-90t90-38h416q53 0 117 26.5t102 64.5l715 714q37 39 37 91zm384 0q0 53-37 90l-491 492q-39 37-91 37-36 0-59-14t-53-45l470-470q37-37 37-90 0-52-37-91l-715-714q-38-38-102-64.5t-117-26.5h224q53 0 117 26.5t102 64.5l715 714q37 39 37 91z'></path></svg></span>
+                        <a>Children</a>, <a>Sports</a>, <a>Education</a>
+                        </span>
+                        <span class='right'>
+                        <span class='icon'><svg width='1792' height='1792' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M704 384q-153 0-286 52t-211.5 141-78.5 191q0 82 53 158t149 132l97 56-35 84q34-20 62-39l44-31 53 10q78 14 153 14 153 0 286-52t211.5-141 78.5-191-78.5-191-211.5-141-286-52zm0-128q191 0 353.5 68.5t256.5 186.5 94 257-94 257-256.5 186.5-353.5 68.5q-86 0-176-16-124 88-278 128-36 9-86 16h-3q-11 0-20.5-8t-11.5-21q-1-3-1-6.5t.5-6.5 2-6l2.5-5 3.5-5.5 4-5 4.5-5 4-4.5q5-6 23-25t26-29.5 22.5-29 25-38.5 20.5-44q-124-72-195-177t-71-224q0-139 94-257t256.5-186.5 353.5-68.5zm822 1169q10 24 20.5 44t25 38.5 22.5 29 26 29.5 23 25q1 1 4 4.5t4.5 5 4 5 3.5 5.5l2.5 5 2 6 .5 6.5-1 6.5q-3 14-13 22t-22 7q-50-7-86-16-154-40-278-128-90 16-176 16-271 0-472-132 58 4 88 4 161 0 309-45t264-129q125-92 192-212t67-254q0-77-23-152 129 71 204 178t75 230q0 120-71 224.5t-195 176.5z'/></svg></span>                        16
+                        </span>
+                     </div>
+                     <h3><a>Get doctor idea festival of the 2017</a></h3>
+                     <p>
+                        <span class='icon'><svg width='2048' height='1792' viewBox='0 0 2048 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1943 952q0 31-31 66l-336 396q-43 51-120.5 86.5t-143.5 35.5h-1088q-34 0-60.5-13t-26.5-43q0-31 31-66l336-396q43-51 120.5-86.5t143.5-35.5h1088q34 0 60.5 13t26.5 43zm-343-344v160h-832q-94 0-197 47.5t-164 119.5l-337 396-5 6q0-4-.5-12.5t-.5-12.5v-960q0-92 66-158t158-66h320q92 0 158 66t66 158v32h544q92 0 158 66t66 158z'/></svg></span>
+                        <a>Sports</a>, <a>education</a>, <a>Freedom</a>
+                     </p>
+
+                  </div>
+                  <div class='latest-item-author'>
+                     <img src='assets/multimedia/images/speaker6.jpg' alt=''>
+                     <div>Jim Carry</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class='photos'>
+         <h2 class='section-title'>photos
+         <span class='section-title-icon'><i class='material-icons'>flag</i></span>
+      </h2>
+         <div id='photos-slider' class='photos-slider'>
+            <div class='slider-content'>
+               <div class='slider-item'>
+                  <div class='slider-item-image'><img src='assets/multimedia/images/1.jpg' alt=''></div>
+               </div>
+               <div class='slider-item'>
+                  <div class='slider-item-image'><img src='assets/multimedia/images/2.jpg' alt=''></div>
+               </div>
+               <div class='slider-item'>
+                  <div class='slider-item-image'><img src='assets/multimedia/images/3.jpg' alt=''></div>
+               </div>
+               <div class='slider-item'>
+                  <div class='slider-item-image'><img src='assets/multimedia/images/4.jpg' alt=''></div>
+               </div>
+               <div class='slider-item'>
+                  <div class='slider-item-image'><img src='assets/multimedia/images/5.jpg' alt=''></div>
+               </div>
+               <div class='slider-item'>
+                  <div class='slider-item-image'><img src='assets/multimedia/images/6.jpg' alt=''></div>
+               </div>
+            </div>
+            <div class='slider-controls'>
+               <div class='slider-controls-nav center'>
+                  <div class='left'><i class='material-icons'>keyboard_arrow_left</i></div>
+                  <div class='right'><i class='material-icons'>keyboard_arrow_right</i></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class='our-client'>
+         <div class='container'>
+            <h2 class='section-title'>our client
+            <span class='section-title-icon'><i class='material-icons'>person</i></span>
+         </h2>
+            <div class='our-client-content'>
+               <div class='item'>
+                  <img src='assets/multimedia/images/partner1.png' alt=''>
+               </div>
+               <div class='item'>
+                  <img src='assets/multimedia/images/partner2.png' alt=''>
+               </div>
+               <div class='item'>
+                  <img src='assets/multimedia/images/partner3.png' alt=''>
+               </div>
+               <div class='item'>
+                  <img src='assets/multimedia/images/partner4.png' alt=''>
+               </div>
+               <div class='item'>
+                  <img src='assets/multimedia/images/partner5.png' alt=''>
+               </div>
+               <div class='item'>
+                  <img src='assets/multimedia/images/partner1.png' alt=''>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class='call-to-action'>
+         <div class='call-overlay'></div>
+         <div class='container'>
+            <h2>Want to be a Volentaree?</h2>
+            <p>Join With us fo Have any followers yet</p>
+            <button class='mat-button mat-ripple-container'>
+            <span class='mat-button-text'>Join Now</span>
+            <div class='mat-button-focus-overlay'></div>
+         </button>
+         </div>
+      </div>
+      <div class='testimonials'>
+         <h2 class='section-title'>testimonials
+         <span class='section-title-icon'><i class='material-icons'>favorite</i></span>
+      </h2>
+         <div id='testimonials-slider' class='testimonials-slider'>
+            <div class='slider-content'>
+               <div class='slider-item'>
+                  <div class='slider-item-content'>
+                     <div class='slider-item-content-inner'>
+                        <h3 class='tm-title'>Great job I've ever had</h3>
+                        <p>
+                           Contrary to popular belief, rorem ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+                        </p>
+                        <img src='assets/multimedia/images/reviewer1.jpg' alt='client'>
+                        <div>John Doe <span>Assistant Manager, GSM Group</span></div>
+                     </div>
+                  </div>
+               </div>
+               <div class='slider-item'>
+                  <div class='slider-item-content'>
+                     <div class='slider-item-content-inner'>
+                        <h3 class='tm-title'>First true generator on the Interne</h3>
+                        <p>
+                           Standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from 'de Finibus Bonorum et Malorum' by Cicero are also reproduced in their exact original form, accompanied by English versions
+                           from the 1914 translation by H. Rackham.
+                        </p>
+                        <img src='assets/multimedia/images/speaker2.jpg' alt='client'>
+                        <div>John Doe <span>Assistant Manager, GSM Group</span></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class='slider-controls'>
+               <div class='slider-controls-nav center'>
+                  <div class='left'><i class='material-icons'>keyboard_arrow_left</i></div>
+                  <div class='right'><i class='material-icons'>keyboard_arrow_right</i></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class='newsletter'>
+         <div class="container">
+            <div>
+               <h2>Newsletter</h2>
+               <p>Submit email to subscribe for newsletter</p>
+            </div>
+            <div>
+               <form class="newsletter-form">
+                  <div class="input-group">
+                     <div class="input-inner">
+                        <input type="text">
+                        <span class="underline"></span>
+                        <label>Your mail</label>
+                     </div>
+                  </div>
+                  <div class="input-actions">
+                     <button class="mat-button mat-ripple-container" type="submit">
+                     <span class="mat-button-text">SUBSCRIBE</span>
+                     <div class="mat-button-focus-overlay"></div>
+                  </button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+      <footer>
+         <div class='footer-top'>
+            <div class='container'>
+               <div class='footer-widget footer-logo'>
+                  <img class='retina' src='assets/multimedia/images/logo-footer.png' alt='logo'>
+                  <p>Lorem ipsum dolor sit amet, his ferri probatus neglegentur te, eum affert legere nominavi ad, eu enim semper dictas ius. Legimus delicata an sit. Sea ex nonumes molestie. Cu salutandi scribentur.</p>
+                  <div class='footer-social'>
+                     <a>
+                     <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1408 610q-56 25-121 34 68-40 93-117-65 38-134 51-61-66-153-66-87 0-148.5 61.5t-61.5 148.5q0 29 5 48-129-7-242-65t-192-155q-29 50-29 106 0 114 91 175-47-1-100-26v2q0 75 50 133.5t123 72.5q-29 8-51 8-13 0-39-4 21 63 74.5 104t121.5 42q-116 90-261 90-26 0-50-3 148 94 322 94 112 0 210-35.5t168-95 120.5-137 75-162 24.5-168.5q0-18-1-27 63-45 105-109zm256-194v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"/></svg>
+                  </a>
+                     <a>
+                     <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M365 1414h231v-694h-231v694zm246-908q-1-52-36-86t-93-34-94.5 34-36.5 86q0 51 35.5 85.5t92.5 34.5h1q59 0 95-34.5t36-85.5zm585 908h231v-398q0-154-73-233t-193-79q-136 0-209 117h2v-101h-231q3 66 0 694h231v-388q0-38 7-56 15-35 45-59.5t74-24.5q116 0 116 157v371zm468-998v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"/></svg>
+                  </a>
+                     <a>
+                     <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1420 638q10-216-161-222-231-8-312 261 44-19 82-19 85 0 74 96-4 57-74 167t-105 110q-43 0-82-169-13-54-45-255-30-189-160-177-59 7-164 100l-81 72-81 72 52 67q76-52 87-52 57 0 107 179 15 55 45 164.5t45 164.5q68 179 164 179 157 0 383-294 220-283 226-444zm244-222v960q0 119-84.5 203.5t-203.5 84.5h-960q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960q119 0 203.5 84.5t84.5 203.5z"/></svg>
+                  </a>
+                     <a>
+                     <svg width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1376 128q119 0 203.5 84.5t84.5 203.5v960q0 119-84.5 203.5t-203.5 84.5h-188v-595h199l30-232h-229v-148q0-56 23.5-84t91.5-28l122-1v-207q-63-9-178-9-136 0-217.5 80t-81.5 226v171h-200v232h200v595h-532q-119 0-203.5-84.5t-84.5-203.5v-960q0-119 84.5-203.5t203.5-84.5h960z"/></svg>
+                  </a>
+                  </div>
+               </div>
+               <div class='footer-widget footer-address'>
+                  <h3 class='footer-title'>Office address</h3>
+                  <p>123 Imaginary Drive Danbury,
+                     <br> Connecticut, USA</p>
+                  <p>
+                     <span><i class='material-icons'>call</i>555.555.1234</span>
+                     <span><i class='material-icons'>mail_outline</i>hello@example.com</span>
+                  </p>
+                  <div class='footer-map'>
+                     <a><i class='material-icons'>location_on</i>See in map</a>
+                  </div>
+               </div>
+               <div class='footer-widget'>
+                  <h3 class='footer-title'>Quick link</h3>
+                  <ul>
+                     <li><a>Dolor sit amet, his ferri</a></li>
+                     <li><a>probatus neglegentur te,</a></li>
+                     <li><a>Affert legere nomina,</a></li>
+                     <li><a>Enim semper dictas</a></li>
+                     <li><a>Legimus delicata</a></li>
+                     <li><a>Nonumes molestie.</a></li>
+                  </ul>
+               </div>
+               <div class='footer-widget'>
+                  <h3 class='footer-title'>Anual reports</h3>
+                  <ul>
+                     <li><a>Reports 2016</a></li>
+                     <li><a>Commercial reports 2015,</a></li>
+                     <li><a>Sales report November, 2016</a></li>
+                     <li><a>Half yearly report Jan-Jun 2016</a></li>
+                     <li><a>Financial report 2014</a></li>
+                     <li><a>Technical report 2015</a></li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class='footer-bottom'>
+            <div class="container">
+               <span><a>Tarms &amp; Condition</a></span>
+               <span>© 2017 beCharity</span>
+            </div>
+         </div>
+      </footer>
+      <button id='scrollUp' class='mat-button mat-ripple-container mat-fab-button scroll-button'>
+      <span class='mat-button-text'>
+         <i class='material-icons'>keyboard_arrow_up</i>
+      </span>
+      <div class='mat-button-focus-overlay'></div>
+   </button>
    </div>
 </body>
 

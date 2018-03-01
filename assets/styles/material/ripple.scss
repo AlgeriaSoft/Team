@@ -1,0 +1,36 @@
+.mat-ripple-container {
+   overflow: hidden !important;
+   position: relative !important;
+
+   > .mat-ripple {
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      display: block !important;
+      position: absolute !important;
+      border-radius: inherit !important;
+      pointer-events: none !important;
+      transform: perspective(0px) !important;
+
+      > span {
+         transform: scale(0);
+         border-radius: 50% !important;
+         position: absolute !important;
+         background-color: rgba(#000000, 0.1) !important;
+         transition: opacity 640ms, transform 640ms !important;
+      }
+   }
+
+   &.mat-ripple-white > .mat-ripple > span {
+      background-color: rgba(#FFFFFF, 0.1) !important;
+   }
+
+   &.mat-ripple-black > .mat-ripple > span {
+      background-color: rgba(#000000, 0.1) !important;
+   }
+
+   &.mat-ripple-indigo > .mat-ripple > span {
+      background-color: rgba(#3F51b5, 0.1) !important;
+   }
+}
