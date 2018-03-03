@@ -114,7 +114,6 @@ export class $ {
    append(element) {
       return this.each(function() {
          if ((typeof element).toUpperCase() === 'STRING' && $.regex.test(element)) {
-            console.log(element);
             this.appendChild($.create(element));
          } else {
             this.appendChild(element.get(0));
@@ -134,6 +133,14 @@ export class $ {
 
    empty() {
 
+   }
+
+   clone(deep) {
+      let cloneNodes = [];
+      this.each(function() {
+         cloneNodes.push(this.cloneNode(deep));
+      });
+      return new $(cloneNodes);
    }
 
    remove() {

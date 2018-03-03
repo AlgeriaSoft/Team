@@ -2381,6 +2381,7 @@ input[type='button'].disabled {
   position: fixed;
   background: #FF3450;
   visibility: visible;
+  pointer-events: none;
 }
 
 .preload-content {

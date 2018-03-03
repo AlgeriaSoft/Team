@@ -15,12 +15,12 @@ new $(window).on('load', function() {
    /*
       Show page
     */
-   window.setTimeout(() => {
+   // window.setTimeout(() => {
       document.querySelector('.preload-content').style.opacity = '1';
       document.querySelector('.preload-content').style.visibility = 'visible';
       document.querySelector('.preload').style.height = '0';
       document.querySelector('.preload').style.visibility = 'hidden';
-   }, 2000);
+   // }, 2000);
 })
 new $(document).ready(function(e) {
 
@@ -54,7 +54,7 @@ new $(document).ready(function(e) {
    }
    Material.ripple('.mat-ripple-container');
    new Slider('#home-slider', true, false);
-   new Slider('#event-slider', false, true);
-   new Slider('#photos-slider', false, true, true);
-   new Slider('#testimonials-slider', false, true, true);
+   // new Slider('#event-slider', false, true);
+   // new Slider('#photos-slider', false, true, true);
+   // new Slider('#testimonials-slider', false, true, true);
 });

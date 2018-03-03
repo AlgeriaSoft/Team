@@ -9,17 +9,25 @@ export class Slider {
       this.startClientX = 0;
       this.currentSlide = 0;
       this.isMouseDown = false;
+      this.currentSlider = null;
       this.infinity = infinity;
       this.startPixelOffset = 0;
       this.isDotsEnabled = dots;
       this.slider = new $(selector).find('.slider-content');
       this.slideCount = this.slider.find('.slider-item').length;
-      new $(selector).on('mousedown', this.start.bind(this))
-         .on('mouseleave', function(e) {
-            this.isMouseDown = false;
-         }.bind(this))
-         .on('mouseup', this.end.bind(this))
-         .on('mousemove', this.slide.bind(this));
+      new $(selector).mousedown(this.start.bind(this))
+         .mouseup(this.end.bind(this))
+         .mousemove(this.slide.bind(this))
+         .click(function(e) {
+            this.currentSlider = new $(e.currentTarget);
+         }.bind(this));
+      new $(document).keyup(function(e) {
+         if (e.keyCode === 37) {
+            this.navLeft();
+         } else if (e.keyCode === 39) {
+            this.navRight();
+         }
+      }.bind(this));
       if (this.isDotsEnabled) {
          this.createDots();
       }
@@ -48,17 +56,25 @@ export class Slider {
 
    navLeft(e) {
       if (this.currentSlide - 1 < 0) {
-         this.currentSlide = 0;
+         return;
       }
       this.currentSlide--;
+      if (this.isDotsEnabled) {
+         this.slider.parent().find('.slider-controls-dots').children().removeClass('active');
+         this.slider.parent().find('.slider-controls-dots').children().eq(this.currentSlide).addClass('active');
+      }
       this.slider.css('transform', `translateX(${this.slider.find('.slider-item').eq(this.currentSlide).get(0).offsetLeft * -1}px)`);
    }
 
    navRight(e) {
       if (this.currentSlide + 1 === this.slideCount) {
-         this.currentSlide = 0;
+         return;
       }
       this.currentSlide++;
+      if (this.isDotsEnabled) {
+         this.slider.parent().find('.slider-controls-dots').children().removeClass('active');
+         this.slider.parent().find('.slider-controls-dots').children().eq(this.currentSlide).addClass('active');
+      }
       this.slider.css('transform', `translateX(${this.slider.find('.slider-item').eq(this.currentSlide).get(0).offsetLeft * -1 }px)`);
    }
 
@@ -106,6 +122,15 @@ export class Slider {
          this.currentSlide = this.pixelOffset < this.startPixelOffset ? this.currentSlide + 1 : this.currentSlide - 1;
          this.currentSlide = Math.min(Math.max(this.currentSlide, 0), this.slideCount - 1);
          this.pixelOffset = this.currentSlide * -this.slider.find('.slider-item').width();
+         if (this.infinity && this.slider.get(0).offsetWidth === this.pixelOffset * -1) {
+            this.slideCount = this.slideCount + 1;
+            if (this.pixelOffset === 0) {
+               this.slider.append(this.slider.find('.slider-item').eq(this.slideCount - 1).clone(true).addClass('cloned-item'));
+            } else {
+               this.slider.append(this.slider.find('.slider-item').eq(0).clone(true).addClass('cloned-item'));
+            }
+            this.slider.append(this.slider.find('.slider-item').eq(0).clone(true).addClass('cloned-item'));
+         }
          this.slider.css('transform', `translateX(${this.pixelOffset}px)`).removeClass('active');
          if (this.isDotsEnabled) {
             this.slider.parent().find('.slider-controls-dots').children().removeClass('active');
