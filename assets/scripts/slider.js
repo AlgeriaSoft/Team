@@ -3,9 +3,11 @@ import {
 } from './$.js';
 export class Slider {
 
-   constructor(selector, dots, buttonNav, infinity = false) {
+   constructor(selector, dots, buttonNav, infinity = false, autoNav = false, delay = 1000) {
       this.sliding = 0;
+      this.delay = delay;
       this.pixelOffset = 0;
+      this.interval = null;
       this.startClientX = 0;
       this.currentSlide = 0;
       this.isMouseDown = false;
@@ -15,12 +17,14 @@ export class Slider {
       this.isDotsEnabled = dots;
       this.slider = new $(selector).find('.slider-content');
       this.slideCount = this.slider.find('.slider-item').length;
-      new $(selector).mousedown(this.start.bind(this))
+      new $(selector).parent()
+         .mouseover(function(e) {
+            window.clearInterval(this.interval);
+         }.bind(this))
+         .mouseout(this.autoNav.bind(this))
+         .mousedown(this.start.bind(this))
          .mouseup(this.end.bind(this))
-         .mousemove(this.slide.bind(this))
-         .click(function(e) {
-            this.currentSlider = new $(e.currentTarget);
-         }.bind(this));
+         .mousemove(this.slide.bind(this));
       new $(document).keyup(function(e) {
          if (e.keyCode === 37) {
             this.navLeft();
@@ -35,6 +39,10 @@ export class Slider {
       if (buttonNav) {
          this.slider.parent().find('.slider-controls-nav .nav-left').click(this.navLeft.bind(this));
          this.slider.parent().find('.slider-controls-nav .nav-right').click(this.navRight.bind(this));
+      }
+
+      if (autoNav) {
+         this.autoNav()
       }
    }
 
@@ -51,6 +59,14 @@ export class Slider {
             new $(e.currentTarget).addClass('active');
             this.goSlide(i);
          }.bind(this));
+      }
+   }
+
+   autoNav() {
+      if (!this.isMouseDown) {
+         this.interval = window.setInterval(() => {
+            this.navRight();
+         }, this.delay);
       }
    }
 
