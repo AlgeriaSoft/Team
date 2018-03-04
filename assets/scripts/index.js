@@ -52,9 +52,27 @@ new $(document).ready(function(e) {
          time: 1000
       });
    }
+   /*
+      Ripple button animtion
+    */
    Material.ripple('.mat-ripple-container');
-   new Slider('#home-slider', true, false);
-   new Slider('#event-slider', false, true);
-   new Slider('#photos-slider', false, true, true, true, 2000);
-   new Slider('#testimonials-slider', false, true, true);
+   /*
+      Carsoul sliders
+    */
+   new Slider('#home-slider', {
+      dots: true
+   });
+   new Slider('#event-slider', {
+      button: true
+   });
+   new Slider('#photos-slider', {
+      auto: true,
+      delay: 2000,
+      button: true,
+      infinity: true
+   });
+   new Slider('#testimonials-slider', {
+      button: true,
+      infinity: true
+   });
 });

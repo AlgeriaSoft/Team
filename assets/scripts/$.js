@@ -97,18 +97,16 @@ export class $ {
       return new $(elements);
    }
 
-   is() {
-
+   is(element) {
+      if (this.eq(0) === element) {
+         return true;
+      } else {
+         return false;
+      }
    }
 
-   not(selector) {}
+   not(selector) {
 
-   filter(selector) {
-      let elements = [];
-      this.find('*').each(function() {
-         elements.push(this);
-      });
-      return new $(elements);
    }
 
    append(element) {
@@ -124,15 +122,17 @@ export class $ {
    prepend(element) {
       return this.each(function() {
          if ((typeof element).toUpperCase() === 'STRING' && $.regex.test(element)) {
-            this.insertBefore($.create(element), this.firstChild());
+            this.insertBefore($.create(element), new $(this).firstChild().get(0));
          } else {
-            this.insertBefore(element.get(0), this.firstChild());
+            this.insertBefore(element.get(0), new $(this).firstChild().get(0));
          }
       });
    }
 
-   empty() {
-
+   replace(element) {
+      return this.each(function() {
+         this.replaceWith(element.get(0));
+      });
    }
 
    clone(deep) {
@@ -141,6 +141,12 @@ export class $ {
          cloneNodes.push(this.cloneNode(deep));
       });
       return new $(cloneNodes);
+   }
+
+   empty() {
+      return this.each(function() {
+         new $(this).html('');
+      });
    }
 
    remove() {
