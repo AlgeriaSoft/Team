@@ -1,0 +1,50 @@
+.newsletter {
+   background: #f3f3f3;
+   padding: 70px 0 50px;
+
+   > .container {
+      display: flex;
+
+      > div {
+         &:nth-child(1) {
+            flex: 0 0 25%;
+         }
+
+         &:nth-child(2) {
+            flex: 0 0 75%;
+
+            > form {
+               display: flex;
+            }
+
+            .input-group {
+               flex: 0 0 80%;
+               padding: 0 10%;
+            }
+
+            .input-actions {
+               flex: 0 0 20%;
+               padding: 0 5%;
+            }
+
+            .mat-button {
+               height: 34px;
+               color: #FFFFFF;
+               min-width: 90px;
+               font-size: 12px;
+               font-weight: 700;
+               background: #FF3450;
+               line-height: 34px;
+               text-align: center;
+               flex: 0 0 calc(100% / 4);
+               text-transform: uppercase;
+            }
+         }
+      }
+   }
+
+   h2 {
+      font-size: 30px;
+      margin: 0 0 10px;
+   }
+}

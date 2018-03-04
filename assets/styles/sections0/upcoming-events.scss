@@ -1,0 +1,209 @@
+.upcoming-events {
+   padding-top: 80px;
+
+   .section-title > .section-title-icon > i.material-icons {
+      transform: translateX(-7px);
+   }
+
+   .event-slider {
+      position: relative;
+
+      > {
+         .slider-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            transform: translateX(0);
+            transition: all 0.5s ease-out;
+
+            &.active {
+               cursor: grabbing;
+               cursor: -webkit-grabbing;
+            }
+
+            > .slider-item {
+               width: 100%;
+               height: 600px;
+               display: flex;
+               flex: 0 0 100%;
+               position: relative;
+
+               > {
+                  .slider-item-content {
+                     width: 50%;
+                     position: relative;
+                  }
+
+                  .slider-item-image {
+                     width: 50%;
+                     position: relative;
+
+                     > img {
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        position: absolute;
+                        object-position: 50% 50%;
+                        transform-style: preserve-3d;
+                     }
+                  }
+
+                  .slider-item-content > .slider-item-content-inner {
+                     width: 100%;
+                     height: 100%;
+                     overflow: hidden;
+                     background: #FF3450;
+                     padding: 80px 60px;
+                     color: #FFFFFF !important;
+
+                     > {
+                        h3 {
+                           font-size: 24px;
+                           margin: 25px 0 0;
+                           font-weight: 700;
+                           line-height: 30px;
+                           padding-bottom: 15px;
+                        }
+
+                        p {
+                           opacity: 0.8;
+                           padding-bottom: 15px;
+                        }
+
+                        .slide-meta > span {
+                           padding-right: 10px;
+                           display: inline-flex;
+
+                           > i.material-icons {
+                              color: #FFFFFF;
+                              font-size: 14px;
+                              background: #FF3450;
+                              padding-right: 5px;
+                              align-self: center;
+                           }
+                        }
+
+                        .speaker {
+                           color: #FF3450;
+                           float: left;
+                           height: 24px;
+                           min-height: 28px;
+                           font-weight: 700;
+                           margin-top: 55px;
+                           position: relative;
+                           background-color: #FFFFFF;
+
+                           > {
+                              .speaker-text {
+                                 float: left;
+                                 display: flex;
+                                 line-height: 28px;
+                                 padding: 0 25px 0 12px;
+
+                                 > i.material-icons {
+                                    font-size: 20px;
+                                    margin-right: 7px;
+                                    align-self: center;
+                                 }
+                              }
+
+                              .speaker-thumb {
+                                 float: left;
+                                 margin-top: -11px;
+
+                                 > img {
+                                    width: 50px;
+                                    float: left;
+                                    height: 50px;
+                                    margin-right: 13px;
+                                    border: 1px solid #FFFFFF;
+                                 }
+                              }
+                           }
+                        }
+
+                        .join-list {
+                           clear: left;
+                           float: left;
+                           display: flex;
+                           margin-top: 60px;
+                           overflow: hidden;
+                           padding-bottom: 0;
+
+                           > {
+                              .mat-button {
+                                 height: 34px;
+                                 min-width: 90px;
+                                 font-size: 12px;
+                                 font-weight: 700;
+                                 background: #2867DE;
+                                 line-height: 34px;
+                                 text-align: center;
+                                 text-transform: uppercase;
+
+                                 &:hover {
+                                    color: #2867DE;
+                                    background: #FFFFFF;
+                                 }
+                              }
+
+                              .social-icon {
+                                 display: flex;
+                                 margin-top: 5px;
+                                 margin-left: 20px;
+
+                                 > a {
+                                    width: 25px;
+                                    height: 25px;
+                                    display: block;
+
+                                    > img {
+                                       width: auto;
+                                       height: auto;
+                                       max-width: 20px;
+                                       max-height: 20px;
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+
+         .slider-controls {
+            > .slider-controls-nav {
+               width: 100%;
+
+               > div {
+                  top: 50%;
+                  position: absolute;
+
+                  &.nav-right {
+                     right: 0;
+                  }
+
+                  i.material-icons {
+                     width: 60px;
+                     height: 60px;
+                     color: #FFFFFF;
+                     cursor: pointer;
+                     font-size: 60px;
+                     line-height: 60px;
+
+                     &:hover {
+                        color: #2867DE;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

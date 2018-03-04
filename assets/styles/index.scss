@@ -1,13 +1,13 @@
-@import './mixins.scss';
+// @import './mixins.scss';
 @import 'vars/color.scss';
 @import 'vars/vars.scss';
 @import '../vendor/normalize.min.scss';
 @import '../vendor/fonts/roboto/roboto.min.scss';
 @import '../vendor/fonts/material-design-icons/material-icons.min.scss';
 @import 'scrollbar.scss';
-@import 'animations/animate.scss';
+// @import 'animations/animate.scss';
 @import 'animations/progress.scss';
-@import 'transitions/transition.scss';
+// @import 'transitions/transition.scss';
 @import 'material/index.scss';
 @import 'sections/header.scss';
 @import 'sections/main.scss';
@@ -182,6 +182,7 @@ p {
    padding-left: 15px;
    padding-right: 15px;
 }
+
 @media (min-width: 768px) {
    .container {
       width: 750px;

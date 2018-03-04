@@ -1,0 +1,23 @@
+.our-client {
+   padding-top: 80px;
+   background: #f3f3f3;
+   padding-bottom: 85px;
+
+   .our-client-content {
+      display: flex;
+
+      > div.item {
+         min-height: 1px;
+         position: relative;
+         padding-left: 15px;
+         padding-right: 15px;
+         width: calc(100% / 6);
+
+         > img {
+            margin: 15px 0;
+            padding: 0 25px;
+            background: #FFFFFF;
+         }
+      }
+   }
+}

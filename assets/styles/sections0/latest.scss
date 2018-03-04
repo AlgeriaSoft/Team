@@ -1,0 +1,109 @@
+.latest-blog {
+   padding-top: 80px;
+   background: #f3f3f3;
+   padding-bottom: 50px;
+
+   .latest-lists {
+      display: flex;
+
+      > .latest-item {
+         min-height: 1px;
+         overflow: hidden;
+         margin-left: 15px;
+         background: #FFFFFF;
+         margin-right: 15px;
+         position: relative;
+         margin-bottom: 50px;
+         width: calc(100% / 3);
+
+         > {
+            .latest-item-image {
+               width: 100%;
+            }
+
+            .latest-item-content {
+               padding: 30px;
+               border-bottom: 1px solid #e7e7e7;
+
+               a:hover {
+                  color: #FF3450;
+               }
+
+               .icon {
+                  width: 17px;
+                  height: 17px;
+                  margin-right: 10px;
+                  align-self: center;
+
+                  > svg {
+                     width: auto;
+                     height: auto;
+                     fill: #7f7f7f;
+                     max-width: 17px;
+                     max-height: 17px;
+                  }
+               }
+
+               > {
+                  .post-meta {
+                     color: #7f7f7f;
+                     font-weight: 500;
+                     padding-bottom: 15px;
+
+                     > {
+                        span {
+                           display: inline-flex;
+                        }
+
+                        .right {
+                           color: #FF3450;
+                           font-size: 14px;
+                           font-weight: 500;
+                           line-height: 20px;
+                           text-align: center;
+
+                           svg {
+                              fill: #FF3450;
+                           }
+                        }
+                     }
+                  }
+
+                  h3 {
+                     margin: 0;
+                     color: #333333;
+                     font-size: 24px;
+                     font-weight: 700;
+                     line-height: 30px;
+                  }
+
+                  p {
+                     display: flex;
+                     font-weight: 500;
+                     padding-top: 15px;
+                  }
+               }
+            }
+
+            .latest-item-author {
+               display: flex;
+               overflow: hidden;
+               padding: 20px 30px;
+
+               > img {
+                  width: 32px;
+                  height: 32px;
+                  border-radius: 50%;
+                  border: 1px solid #e7e7e7;
+
+                  + div {
+                     margin-bottom: 0;
+                     padding-top: 5px;
+                     padding-left: 10px;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

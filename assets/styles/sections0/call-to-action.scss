@@ -1,0 +1,43 @@
+.call-to-action {
+   padding-top: 80px;
+   position: relative;
+   text-align: center;
+   padding-bottom: 100px;
+   background-size: cover;
+   background: url("../multimedia/images/space.jpg");
+
+   > .call-overlay {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+   }
+
+   h2 {
+      font-size: 30px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      position: relative;
+      color: #FFFFFF !important;
+   }
+
+   p {
+      position: relative;
+      color: #FFFFFF !important;
+   }
+
+   .mat-button {
+      color: #FFFFFF;
+      font-size: 12px;
+      margin-top: 30px;
+      font-weight: 700;
+      background: #FF3450;
+      text-transform: uppercase;
+
+      &:hover {
+         background: #2867DE;
+      }
+   }
+}
