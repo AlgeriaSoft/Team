@@ -36,7 +36,6 @@ header.is-fixed + .home-slider {
    height: 100%;
    object-fit: cover;
    position: absolute;
-   vertical-align: middle;
    object-position: 50% 50%;
 }
 
@@ -64,9 +63,6 @@ header.is-fixed + .home-slider {
 .home-slider > .slider-content > .slider-item > .slider-item-content .slider-item-content-inner > p {
    opacity: 0.8;
    color: #ffffff;
-   font-size: 14px;
-   margin: 0 0 10px;
-   line-height: 22px;
    margin-bottom: 50px;
 }
 
@@ -75,9 +71,9 @@ header.is-fixed + .home-slider {
    min-width: 90px;
    font-size: 12px;
    font-weight: 700;
-   background: #FF3450;
    line-height: 34px;
    text-align: center;
+   background: #FF3450;
    text-transform: uppercase;
 }
 

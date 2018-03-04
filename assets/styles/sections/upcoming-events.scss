@@ -47,7 +47,6 @@
                         height: 100%;
                         object-fit: cover;
                         position: absolute;
-                        vertical-align: middle;
                         object-position: 50% 50%;
                         transform-style: preserve-3d;
                      }
@@ -72,9 +71,6 @@
 
                         p {
                            opacity: 0.8;
-                           font-size: 14px;
-                           margin: 0 0 10px;
-                           line-height: 22px;
                            padding-bottom: 15px;
                         }
 
