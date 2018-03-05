@@ -1,14 +1,9 @@
-// @import './mixins.scss';
 @import 'vars/color.scss';
 @import 'vars/vars.scss';
 @import '../vendor/normalize.min.scss';
 @import '../vendor/fonts/roboto/roboto.min.scss';
 @import '../vendor/fonts/material-design-icons/material-icons.min.scss';
-@import 'scrollbar.scss';
-// @import 'animations/animate.scss';
-@import 'animations/progress.scss';
-// @import 'transitions/transition.scss';
-@import 'material/index.scss';
+@import 'library.scss';
 @import 'sections/header.scss';
 @import 'sections/main.scss';
 @import 'sections/home-slider.scss';
@@ -24,177 +19,10 @@
 @import 'sections/newsletter.scss';
 @import 'sections/footer.scss';
 
-*,
-:after,
-:before {
-   box-sizing: border-box;
-}
-
-html {
-   color: #555;
-   font-size: 14px;
-   line-height: 22px;
-   font-family: 'Roboto', sans-serif;
-}
-
 body {
-   overflow-x: hidden;
-   padding: 0 !important;
    background: $body-background !important;
 }
 
-a {
-   color: inherit;
-   text-decoration: none !important;
-
-   &:visited {
-      color: inherit;
-      text-decoration: none !important;
-   }
-}
-
-a,
-a:after,
-a:before {
-   transition: all 0.25s linear;
-}
-
-.cursor-pointer,
-a,
-button,
-input[type='reset'],
-input[type='submit'],
-input[type='button'] {
-   cursor: pointer !important;
-}
-
-.cursor-default,
-a.disabled,
-button[disabled],
-input[type='reset'].disabled,
-input[type='submit'].disabled,
-input[type='button'].disabled {
-   cursor: default !important;
-}
-
-img {
-   border: 0;
-   max-width: 100%;
-   vertical-align: middle;
-}
-
-p {
-   font-size: 14px;
-   margin: 0 0 10px;
-   line-height: 22px;
-}
-
-.cursor-text {
-   cursor: text !important;
-}
-
-.spacer {
-   flex: 1 1 auto !important;
-}
-
-.no-select {
-   cursor: default !important;
-   user-select: none !important;
-}
-
-.clearfix {
-   overflow: auto;
-}
-
-.left {
-   float: left !important;
-}
-
-.right {
-   float: right !important;
-}
-
-.no-margin {
-   margin: 0 !important;
-}
-
-.no-padding {
-   padding: 0 !important;
-}
-
-.center {
-   top: 50% !important;
-   left: 50% !important;
-   position: absolute !important;
-   transform: translate(-50%, -50%) !important;
-}
-
-.background {
-   top: 0 !important;
-   left: 0 !important;
-   margin: 0 !important;
-   padding: 0 !important;
-   width: 100% !important;
-   height: 100% !important;
-   position: absolute !important;
-   background-size: cover !important;
-   background-repeat: no-repeat !important;
-   background-attachment: fixed !important;
-   background-position: center center !important;
-}
-
-.align-left {
-   text-align: left !important;
-}
-
-.align-right {
-   text-align: right !important;
-}
-
-.align-center {
-   text-align: center !important;
-}
-
-.align-justify {
-   text-align: justify !important;
-}
-
 .preload {
-   top: 0;
-   left: 0;
-   opacity: 1;
-   width: 100%;
-   height: 100%;
-   position: fixed;
    background: $red;
-   visibility: visible;
-   pointer-events: none;
-}
-
-.preload-content {
-   opacity: 0;
-   visibility: hidden;
-}
-
-.container {
-   margin-right: auto;
-   margin-left: auto;
-   padding-left: 15px;
-   padding-right: 15px;
-}
-
-@media (min-width: 768px) {
-   .container {
-      width: 750px;
-   }
-}
-@media (min-width: 992px) {
-   .container {
-      width: 970px;
-   }
-}
-@media (min-width: 1200px) {
-   .container {
-      width: 1170px;
-   }
 }

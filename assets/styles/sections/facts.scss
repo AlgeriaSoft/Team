@@ -30,39 +30,37 @@
          display: flex;
          justify-content: center;
 
-         > {
-            .fact-item-icon {
-               width: 50px;
-               height: 50px;
-               color: #ffffff;
-               overflow: hidden;
-               position: relative;
-               margin-right: 15px;
-               align-self: center;
+         .fact-item-icon {
+            width: 50px;
+            height: 50px;
+            color: #ffffff;
+            overflow: hidden;
+            position: relative;
+            margin-right: 15px;
+            align-self: center;
 
-               > svg {
-                  width: auto;
-                  height: auto;
-                  fill: #FFFFFF;
-                  max-width: 50px;
-                  max-height: 50px;
-               }
+            > svg {
+               width: auto;
+               height: auto;
+               fill: #FFFFFF;
+               max-width: 50px;
+               max-height: 50px;
+            }
+         }
+
+         .fact-item-details {
+            .fact-item-count {
+               color: #FFFFFF;
+               font-size: 32px;
+               font-weight: 700;
+               line-height: 38px;
+               position: relative;
             }
 
-            .fact-item-details > {
-               .fact-item-count {
-                  color: #FFFFFF;
-                  font-size: 32px;
-                  font-weight: 700;
-                  line-height: 38px;
-                  position: relative;
-               }
-
-               .fact-item-info {
-                  color: #FFFFFF;
-                  margin-top: 5px;
-                  position: relative;
-               }
+            .fact-item-info {
+               color: #FFFFFF;
+               margin-top: 5px;
+               position: relative;
             }
          }
       }

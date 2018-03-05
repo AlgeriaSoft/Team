@@ -3,13 +3,7 @@ import {
 } from './$.js';
 export class Slider {
 
-   constructor(selector, settings = {
-      dots: false,
-      auto: false,
-      delay: 1000,
-      button: false,
-      infinity: false
-   }) {
+   constructor(selector, settings) {
       this.sliding = 0;
       this.pixelOffset = 0;
       this.interval = null;
@@ -18,13 +12,17 @@ export class Slider {
       this.isMouseDown = false;
       this.currentSlider = null;
       this.startPixelOffset = 0;
-      this.delay = settings.delay;
-      this.isAuto = settings.auto;
       this.noClonedSlideNumber = 0;
-      this.isDotsEnabled = settings.dots;
-      this.isInfinity = settings.infinity;
       this.slider = new $(selector).find('.slider-content');
       this.slideCount = this.slider.find('.slider-item').length;
+      this.cols = settings.cols || 1;
+      this.delay = settings.delay || 1000;
+      this.isAuto = settings.auto || false;
+      this.isInfinity = settings.infinity || false;
+      this.isDotsNavigation = settings.navigation.dots || false;
+      this.isButtonNavigation = settings.navigation.button || false;
+      this.isKeyboardNavigation = settings.navigation.keyboard || false;
+      this.slider.find('.slider-item').css('width', `${this.slider.width() / this.cols}px`);
       new $(selector)
          .mouseover(function(e) {
             window.clearInterval(this.interval);
@@ -33,17 +31,15 @@ export class Slider {
          .mousedown(this.start.bind(this))
          .mousemove(this.slide.bind(this))
          .mouseup(this.end.bind(this));
-      // new $(document).keyup(function(e) {
-      //    if (e.keyCode === 37) {
-      //       this.navLeft();
-      //    } else if (e.keyCode === 39) {
-      //       this.navRight();
-      //    }
-      // }.bind(this));
 
-      if (settings.button) {
-         this.slider.parent().find('.slider-controls-nav .nav-left').click(this.navLeft.bind(this));
-         this.slider.parent().find('.slider-controls-nav .nav-right').click(this.navRight.bind(this));
+      if (this.isKeyboardNavigation) {
+         new $(document).keyup(function(e) {
+            if (e.keyCode === 37) {
+               this.navLeft();
+            } else if (e.keyCode === 39) {
+               this.navRight();
+            }
+         }.bind(this));
       }
 
       if (this.isAuto) {
@@ -54,17 +50,36 @@ export class Slider {
          this.cloneItems();
       }
 
-      if (this.isDotsEnabled) {
-         this.createDots();
+      if (this.isDotsNavigation || this.isButtonNavigation) {
+         this.createSliderControls()
+         if (this.isButtonNavigation) {
+            this.createButtonNav()
+         }
+
+         if (this.isDotsNavigation) {
+            this.createDots();
+         }
       }
+      this.slider.css('width', `${this.slideCount * this.slider.width()}px`);
+   }
+
+   createSliderControls() {
+      this.slider.parent().append('<div class="slider-controls"></div>');
+   }
+
+   createButtonNav() {
+      this.slider.parent().find('.slider-controls').append('<div class="slider-controls-nav"><div class="nav-left"><i class="material-icons">keyboard_arrow_left</i></div><div class="nav-right"><i class="material-icons">keyboard_arrow_right</i></div></div>');
+      this.slider.parent().find('.slider-controls-nav .nav-left').click(this.navLeft.bind(this));
+      this.slider.parent().find('.slider-controls-nav .nav-right').click(this.navRight.bind(this));
    }
 
    createDots() {
-      let parrent = this.slider.parent().find('.slider-controls-dots'),
+      let parent = this.slider.parent().find('.slider-controls').append('<div class="slider-controls-dots"></div>'),
          numOfDots = this.isInfinity ? this.noClonedSlideNumber : this.slideCount;
+      parent = parent.find('.slider-controls-dots');
       for (let i = 0; i < numOfDots; i++) {
          let el = new $('<div class="slider-controls-dot"><span></span></div>');
-         parrent.append(el);
+         parent.append(el);
          if (i === 0) {
             el.addClass('active');
          }
@@ -92,12 +107,12 @@ export class Slider {
          return;
       }
       this.currentSlide--;
-      if (this.isDotsEnabled) {
+      if (this.isDotsNavigation) {
          this.slider.parent().find('.slider-controls-dots').children().removeClass('active');
          this.slider.parent().find('.slider-controls-dots').children()
             .eq(this.isInfinity && this.currentSlide >= this.noClonedSlideNumber ? this.currentSlide - this.noClonedSlideNumber : this.currentSlide).addClass('active');
       }
-      this.slider.css('transform', `translateX(${this.slider.find('.slider-item').eq(this.currentSlide).get(0).offsetLeft * -1}px)`);
+      this.goSlide(this.currentSlide);
    }
 
    navRight(e) {
@@ -108,17 +123,17 @@ export class Slider {
          return;
       }
       this.currentSlide++;
-      if (this.isDotsEnabled) {
+      if (this.isDotsNavigation) {
          this.slider.parent().find('.slider-controls-dots').children().removeClass('active');
          this.slider.parent().find('.slider-controls-dots').children()
             .eq(this.isInfinity && this.currentSlide >= this.noClonedSlideNumber ? this.currentSlide - this.noClonedSlideNumber : this.currentSlide).addClass('active');
       }
-      this.slider.css('transform', `translateX(${this.slider.find('.slider-item').eq(this.currentSlide).get(0).offsetLeft * -1 }px)`);
+      this.goSlide(this.currentSlide);
    }
 
    goSlide(index) {
       this.currentSlide = index;
-      this.slider.css('transform', `translateX(${this.slider.find('.slider-item').eq(index).get(0).offsetLeft * -1}px)`);
+      this.slider.css('transform', `translateX(${this.currentSlide * -this.slider.find('.slider-item').width()}px)`).removeClass('active');
    }
 
    goSlideNoAnimation(index) {
@@ -180,10 +195,11 @@ export class Slider {
          this.currentSlide = Math.min(Math.max(this.currentSlide, 0), this.slideCount - 1);
          this.pixelOffset = this.currentSlide * -this.slider.find('.slider-item').width();
          this.slider.css('transform', `translateX(${this.pixelOffset}px)`).removeClass('active');
+
          if (this.isInfinity && (this.noClonedSlideNumber * 2 === this.currentSlide || this.currentSlide === 0)) {
             this.goSlideNoAnimation(this.noClonedSlideNumber);
          }
-         if (this.isDotsEnabled) {
+         if (this.isDotsNavigation) {
             this.slider.parent().find('.slider-controls-dots').children().removeClass('active');
             this.slider.parent().find('.slider-controls-dots').children()
                .eq(this.isInfinity && this.currentSlide >= this.noClonedSlideNumber ? this.currentSlide - this.noClonedSlideNumber : this.currentSlide).addClass('active');

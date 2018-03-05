@@ -61,14 +61,11 @@ header > .top-nav .email > i.material-icons {
 header > .top-nav .mat-button {
    padding: 0;
    width: 65px;
-   color: #FFFFFF;
    min-width: 65px;
-   background: #FF3450;
-   font-weight: 700;
    max-height: 25px;
    line-height: 22px;
    align-self: center;
-   text-transform: uppercase;
+   background: #FF3450;
    font-size: calc(#{$top-nav-font-size1} - 1px);
 }
 
@@ -248,10 +245,9 @@ header > .main-nav .shopping-button > i.material-icons {
 
 header > .main-nav .shopping-button > .mat-button {
    height: 25px;
-   color: #FFFFFF;
    min-width: 55px;
-   background: #FF3450;
    line-height: 25px;
+   background: #FF3450;
    top: 55% !important;
    position: absolute !important;
 }

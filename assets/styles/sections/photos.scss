@@ -1,71 +1,7 @@
 .photos {
    padding-top: 80px;
 
-   .photos-slider {
-      position: relative;
-
-      > {
-         .slider-content {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            transform: translateX(0);
-            transition: all 0.5s ease-out;
-
-            &.active {
-               cursor: grabbing;
-               cursor: -webkit-grabbing;
-            }
-
-            > .slider-item {
-               width: 100%;
-               height: 400px;
-               display: flex;
-               position: relative;
-               flex: 0 0 calc(100% / 4);
-
-               > .slider-item-image > img {
-                  top: 0;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  width: 100%;
-                  height: 100%;
-                  object-fit: cover;
-                  position: absolute;
-                  object-position: 50% 50%;
-                  transform-style: preserve-3d;
-               }
-            }
-         }
-
-         .slider-controls {
-            > .slider-controls-nav {
-               width: 100%;
-
-               > div {
-                  top: 50%;
-                  position: absolute;
-
-                  &.nav-right {
-                     right: 0;
-                  }
-
-                  i.material-icons {
-                     width: 60px;
-                     height: 60px;
-                     color: #FFFFFF;
-                     cursor: pointer;
-                     font-size: 60px;
-                     line-height: 60px;
-
-                     &:hover {
-                        color: #2867DE;
-                     }
-                  }
-               }
-            }
-         }
-      }
+   .slider-item {
+      height: 400px;
    }
 }
